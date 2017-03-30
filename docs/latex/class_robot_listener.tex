@@ -1,0 +1,50 @@
+\hypertarget{class_robot_listener}{}\section{Robot\+Listener Class Reference}
+\label{class_robot_listener}\index{Robot\+Listener@{Robot\+Listener}}
+
+
+Abstarct base class providing the necessary interface to observe the servo states and bumper states of the observed robot.  
+
+
+
+
+{\ttfamily \#include $<$Robot\+Listener.\+h$>$}
+
+
+
+Inheritance diagram for Robot\+Listener\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{class_robot_listener__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Robot\+Listener\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{class_robot_listener__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_robot_listener_af6be6176f19b4bd28edee8893211a8b2}{}virtual void \hyperlink{class_robot_listener_af6be6176f19b4bd28edee8893211a8b2}{received\+New\+Serial\+U\+S\+B\+Event} (std\+::queue$<$ \hyperlink{structservo_signals}{servo\+Signals} $>$ \&)=0\label{class_robot_listener_af6be6176f19b4bd28edee8893211a8b2}
+
+\begin{DoxyCompactList}\small\item\em virtual function to receive the decoded servos signals \end{DoxyCompactList}\item 
+\hypertarget{class_robot_listener_a73f24d40ff4a0bf93942f2bf261e186c}{}virtual void \hyperlink{class_robot_listener_a73f24d40ff4a0bf93942f2bf261e186c}{received\+New\+Serial\+U\+S\+B\+Event} (std\+::queue$<$ \hyperlink{structbumper}{bumper} $>$ \&)=0\label{class_robot_listener_a73f24d40ff4a0bf93942f2bf261e186c}
+
+\begin{DoxyCompactList}\small\item\em virtual function to receive the decoded bumper events \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Abstarct base class providing the necessary interface to observe the servo states and bumper states of the observed robot. 
+
+This class needs to be subcalssed and the member functions need to be implemented in order to use the interface 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/serge/\+Documents/\+Semester Project I\+N\+I/omnibot-\/lib/\+U\+S\+B\+\_\+robot/include/\hyperlink{_robot_listener_8h}{Robot\+Listener.\+h}\end{DoxyCompactItemize}

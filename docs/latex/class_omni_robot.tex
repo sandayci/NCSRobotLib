@@ -1,0 +1,280 @@
+\hypertarget{class_omni_robot}{}\section{Omni\+Robot Class Reference}
+\label{class_omni_robot}\index{Omni\+Robot@{Omni\+Robot}}
+
+
+Interface to the Omni\+Rob from N\+S\+T.  
+
+
+
+
+{\ttfamily \#include $<$Omni\+Robot.\+h$>$}
+
+
+
+Inheritance diagram for Omni\+Robot\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_omni_robot__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Omni\+Robot\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_omni_robot__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_omni_robot_a0adede977dc636bdc42c99edb148d176}{Omni\+Robot} (int file\+Descriptor)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hypertarget{class_omni_robot_aa1fdc3c89c1cc303fc2416142af847ba}{}bool \hyperlink{class_omni_robot_aa1fdc3c89c1cc303fc2416142af847ba}{twitch} ()\label{class_omni_robot_aa1fdc3c89c1cc303fc2416142af847ba}
+
+\begin{DoxyCompactList}\small\item\em test Omni\+Rob when first connecting \end{DoxyCompactList}\item 
+\hypertarget{class_omni_robot_a9098e781569c5da8c5fdd16be6310866}{}void \hyperlink{class_omni_robot_a9098e781569c5da8c5fdd16be6310866}{process\+Keys} (int keys\+Pressed)\label{class_omni_robot_a9098e781569c5da8c5fdd16be6310866}
+
+\begin{DoxyCompactList}\small\item\em process the keys logged from the keyboard \end{DoxyCompactList}\item 
+void \hyperlink{class_omni_robot_a4bf623e941d12271de06a3feca707f1f}{drive} (double angular\+\_\+vel, bool C\+C\+W, double linear\+\_\+vel, double direction)
+\begin{DoxyCompactList}\small\item\em Make the robot move. \end{DoxyCompactList}\item 
+void \hyperlink{class_omni_robot_ad0719d67222bcea330964a193d8bf717}{drive} ()
+\begin{DoxyCompactList}\small\item\em drive the robot after setting the drive parameters. \end{DoxyCompactList}\item 
+\hypertarget{class_omni_robot_af8a7e63e307d39cd63f9ad8ff1b8f438}{}void \hyperlink{class_omni_robot_af8a7e63e307d39cd63f9ad8ff1b8f438}{emergency\+Stop} ()\label{class_omni_robot_af8a7e63e307d39cd63f9ad8ff1b8f438}
+
+\begin{DoxyCompactList}\small\item\em stop the robot immediatly and set its drive states to 0 \end{DoxyCompactList}\item 
+void \hyperlink{class_omni_robot_a4990bacab4be83a14508ef4a6859a2a5}{get\+Servo\+Position} (int servo\+I\+D, int $\ast$signal)
+\begin{DoxyCompactList}\small\item\em get the last logged position of servo i \end{DoxyCompactList}\item 
+void \hyperlink{class_omni_robot_af6051abc3663618772fcf690445cac14}{get\+Servo\+Speed} (int servo\+I\+D, int $\ast$signal)
+\begin{DoxyCompactList}\small\item\em get the last logged speed of servo in terms of servo signal \end{DoxyCompactList}\item 
+\hypertarget{class_omni_robot_a41817e196ad64ba61daa8bbcc4ccc6c2}{}int \hyperlink{class_omni_robot_a41817e196ad64ba61daa8bbcc4ccc6c2}{get\+Battery\+Voltage} ()\label{class_omni_robot_a41817e196ad64ba61daa8bbcc4ccc6c2}
+
+\begin{DoxyCompactList}\small\item\em get the last logged battery voltage \end{DoxyCompactList}\item 
+void \hyperlink{class_omni_robot_a5ccec8006487e526b20e7a5f69255c00}{set\+Robot\+Drive\+State} (const \hyperlink{structrobot_drive_state}{robot\+Drive\+State} \&)
+\begin{DoxyCompactList}\small\item\em set the robot drive state, but do not drive yet \end{DoxyCompactList}\item 
+\hypertarget{class_omni_robot_a4db727ee61666148106e302e90956bd3}{}void \hyperlink{class_omni_robot_a4db727ee61666148106e302e90956bd3}{set\+Servo\+Speed} (int servo\+I\+D, int signal)\label{class_omni_robot_a4db727ee61666148106e302e90956bd3}
+
+\begin{DoxyCompactList}\small\item\em set the speed signal of servo i. Change is applied directly. \end{DoxyCompactList}\item 
+void \hyperlink{class_omni_robot_a2f3365750b17b172ef265fb94e25c73a}{set\+Servo\+Speeds} (double $\ast$)
+\begin{DoxyCompactList}\small\item\em set the speed signal of all servos. Change is applied directly. \end{DoxyCompactList}\item 
+void \hyperlink{class_omni_robot_a01e9c0201e9bcd1ff6b3f3039e910937}{set\+Servo\+Torque} (int servo\+I\+D, bool enable, int signal)
+\item 
+void \hyperlink{class_omni_robot_a27f0a605b283a8e1a49b5829c656edd8}{parse} (unsigned char $\ast$data, int bytes\+Read)
+\begin{DoxyCompactList}\small\item\em parse commands from the sring received from the serial connection \end{DoxyCompactList}\item 
+void \hyperlink{class_omni_robot_ad7b2e7cf5cca375cfc9ba047264dfcad}{start\+Logging} ()
+\begin{DoxyCompactList}\small\item\em start recording to file \end{DoxyCompactList}\item 
+\hypertarget{class_omni_robot_a899ff538efad531b391e84182a6ed961}{}void \hyperlink{class_omni_robot_a899ff538efad531b391e84182a6ed961}{set\+\_\+time\+\_\+origin} (boost\+::chrono\+::system\+\_\+clock\+::time\+\_\+point start)\label{class_omni_robot_a899ff538efad531b391e84182a6ed961}
+
+\begin{DoxyCompactList}\small\item\em set the original timestamp to synchronize with e\+D\+V\+S \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Interface to the Omni\+Rob from N\+S\+T. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_omni_robot_a0adede977dc636bdc42c99edb148d176}{}\index{Omni\+Robot@{Omni\+Robot}!Omni\+Robot@{Omni\+Robot}}
+\index{Omni\+Robot@{Omni\+Robot}!Omni\+Robot@{Omni\+Robot}}
+\subsubsection[{Omni\+Robot}]{\setlength{\rightskip}{0pt plus 5cm}Omni\+Robot\+::\+Omni\+Robot (
+\begin{DoxyParamCaption}
+\item[{int}]{file\+Descriptor}
+\end{DoxyParamCaption}
+)}\label{class_omni_robot_a0adede977dc636bdc42c99edb148d176}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Descriptor} & is a valid file descriptor to communication interface with the robot \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+??? 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_omni_robot_a4bf623e941d12271de06a3feca707f1f}{}\index{Omni\+Robot@{Omni\+Robot}!drive@{drive}}
+\index{drive@{drive}!Omni\+Robot@{Omni\+Robot}}
+\subsubsection[{drive}]{\setlength{\rightskip}{0pt plus 5cm}void Omni\+Robot\+::drive (
+\begin{DoxyParamCaption}
+\item[{double}]{angular\+\_\+vel, }
+\item[{bool}]{C\+C\+W, }
+\item[{double}]{linear\+\_\+vel, }
+\item[{double}]{direction}
+\end{DoxyParamCaption}
+)}\label{class_omni_robot_a4bf623e941d12271de06a3feca707f1f}
+
+
+Make the robot move. 
+
+The drive function sets the servo speeds of the robot according to the specified input. 
+\begin{DoxyParams}{Parameters}
+{\em angular\+\_\+vel} & can take values from 0 to 100, indicating the speed of the servo (0 = off, 100 = maximum). Determines the turning rate of the robot. \\
+\hline
+{\em C\+C\+W} & determines if the servo is turning C\+C\+W or C\+W \\
+\hline
+{\em linear\+\_\+vel} & can take values from 0 to 100, indicating the speed of the servo (0 = off, 100 = maximum). Determines the linear velocity of the robot. \\
+\hline
+{\em direction} & in degrees. Sets the direction where the robot is headed. N\+B\+: The driving vector is in polar coordinates. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_omni_robot_ad0719d67222bcea330964a193d8bf717}{}\index{Omni\+Robot@{Omni\+Robot}!drive@{drive}}
+\index{drive@{drive}!Omni\+Robot@{Omni\+Robot}}
+\subsubsection[{drive}]{\setlength{\rightskip}{0pt plus 5cm}void Omni\+Robot\+::drive (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_omni_robot_ad0719d67222bcea330964a193d8bf717}
+
+
+drive the robot after setting the drive parameters. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_omni_robot_a5ccec8006487e526b20e7a5f69255c00}{set\+Robot\+Drive\+State} 
+\end{DoxySeeAlso}
+\hypertarget{class_omni_robot_a4990bacab4be83a14508ef4a6859a2a5}{}\index{Omni\+Robot@{Omni\+Robot}!get\+Servo\+Position@{get\+Servo\+Position}}
+\index{get\+Servo\+Position@{get\+Servo\+Position}!Omni\+Robot@{Omni\+Robot}}
+\subsubsection[{get\+Servo\+Position}]{\setlength{\rightskip}{0pt plus 5cm}void Omni\+Robot\+::get\+Servo\+Position (
+\begin{DoxyParamCaption}
+\item[{int}]{servo\+I\+D, }
+\item[{int $\ast$}]{signal}
+\end{DoxyParamCaption}
+)}\label{class_omni_robot_a4990bacab4be83a14508ef4a6859a2a5}
+
+
+get the last logged position of servo i 
+
+
+\begin{DoxyParams}{Parameters}
+{\em servo\+I\+D} & I\+D of the servo \\
+\hline
+{\em signal} & variable to store the signal value \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_omni_robot_af6051abc3663618772fcf690445cac14}{}\index{Omni\+Robot@{Omni\+Robot}!get\+Servo\+Speed@{get\+Servo\+Speed}}
+\index{get\+Servo\+Speed@{get\+Servo\+Speed}!Omni\+Robot@{Omni\+Robot}}
+\subsubsection[{get\+Servo\+Speed}]{\setlength{\rightskip}{0pt plus 5cm}void Omni\+Robot\+::get\+Servo\+Speed (
+\begin{DoxyParamCaption}
+\item[{int}]{servo\+I\+D, }
+\item[{int $\ast$}]{signal}
+\end{DoxyParamCaption}
+)}\label{class_omni_robot_af6051abc3663618772fcf690445cac14}
+
+
+get the last logged speed of servo in terms of servo signal 
+
+
+\begin{DoxyParams}{Parameters}
+{\em servo\+I\+D} & I\+D of the servo \\
+\hline
+{\em signal} & variable to store the signal value \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_omni_robot_a27f0a605b283a8e1a49b5829c656edd8}{}\index{Omni\+Robot@{Omni\+Robot}!parse@{parse}}
+\index{parse@{parse}!Omni\+Robot@{Omni\+Robot}}
+\subsubsection[{parse}]{\setlength{\rightskip}{0pt plus 5cm}void Omni\+Robot\+::parse (
+\begin{DoxyParamCaption}
+\item[{unsigned char $\ast$}]{data, }
+\item[{int}]{bytes\+Read}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_omni_robot_a27f0a605b283a8e1a49b5829c656edd8}
+
+
+parse commands from the sring received from the serial connection 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & the data string read from the serial Port \\
+\hline
+{\em bytes\+Read} & the number of bytes read = length of data \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_robot_a7dcc9de1f4a64894bdc047efd5db8a2b}{Robot}.
+
+\hypertarget{class_omni_robot_a5ccec8006487e526b20e7a5f69255c00}{}\index{Omni\+Robot@{Omni\+Robot}!set\+Robot\+Drive\+State@{set\+Robot\+Drive\+State}}
+\index{set\+Robot\+Drive\+State@{set\+Robot\+Drive\+State}!Omni\+Robot@{Omni\+Robot}}
+\subsubsection[{set\+Robot\+Drive\+State}]{\setlength{\rightskip}{0pt plus 5cm}void Omni\+Robot\+::set\+Robot\+Drive\+State (
+\begin{DoxyParamCaption}
+\item[{const {\bf robot\+Drive\+State} \&}]{in\+State}
+\end{DoxyParamCaption}
+)}\label{class_omni_robot_a5ccec8006487e526b20e7a5f69255c00}
+
+
+set the robot drive state, but do not drive yet 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{structrobot_drive_state}{robot\+Drive\+State}} & is of type \hyperlink{structrobot_drive_state}{robot\+Drive\+State} and encaplsulates the mid-\/level drive states. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{structrobot_drive_state}{robot\+Drive\+State} 
+\end{DoxySeeAlso}
+\hypertarget{class_omni_robot_a2f3365750b17b172ef265fb94e25c73a}{}\index{Omni\+Robot@{Omni\+Robot}!set\+Servo\+Speeds@{set\+Servo\+Speeds}}
+\index{set\+Servo\+Speeds@{set\+Servo\+Speeds}!Omni\+Robot@{Omni\+Robot}}
+\subsubsection[{set\+Servo\+Speeds}]{\setlength{\rightskip}{0pt plus 5cm}void Omni\+Robot\+::set\+Servo\+Speeds (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{signals}
+\end{DoxyParamCaption}
+)}\label{class_omni_robot_a2f3365750b17b172ef265fb94e25c73a}
+
+
+set the speed signal of all servos. Change is applied directly. 
+
+It is better to use this function when setting all servos, as the commands are send in one string, which is more effective and mor secure, especially when communicating via Wi\+Fi 
+\begin{DoxyParams}{Parameters}
+{\em servo\+Speeds\+Array} & array with the servo speeds from lowest to highest servo I\+D. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_omni_robot_a01e9c0201e9bcd1ff6b3f3039e910937}{}\index{Omni\+Robot@{Omni\+Robot}!set\+Servo\+Torque@{set\+Servo\+Torque}}
+\index{set\+Servo\+Torque@{set\+Servo\+Torque}!Omni\+Robot@{Omni\+Robot}}
+\subsubsection[{set\+Servo\+Torque}]{\setlength{\rightskip}{0pt plus 5cm}void Omni\+Robot\+::set\+Servo\+Torque (
+\begin{DoxyParamCaption}
+\item[{int}]{servo\+I\+D, }
+\item[{bool}]{enable, }
+\item[{int}]{signal}
+\end{DoxyParamCaption}
+)}\label{class_omni_robot_a01e9c0201e9bcd1ff6b3f3039e910937}
+set the torque of servo i. get the last logged speed of servo in terms of servo signal
+
+
+\begin{DoxyParams}{Parameters}
+{\em servo\+I\+D} & I\+D of the servo \\
+\hline
+{\em enable} & enable or disable servo \\
+\hline
+{\em signal} & variable to store the signal value \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_omni_robot_ad7b2e7cf5cca375cfc9ba047264dfcad}{}\index{Omni\+Robot@{Omni\+Robot}!start\+Logging@{start\+Logging}}
+\index{start\+Logging@{start\+Logging}!Omni\+Robot@{Omni\+Robot}}
+\subsubsection[{start\+Logging}]{\setlength{\rightskip}{0pt plus 5cm}void Omni\+Robot\+::start\+Logging (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_omni_robot_ad7b2e7cf5cca375cfc9ba047264dfcad}
+
+
+start recording to file 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & determines if we should log or not \\
+\hline
+{\em filename} & nme of the log file to be created \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/serge/\+Documents/\+Semester Project I\+N\+I/omnibot-\/lib/\+U\+S\+B\+\_\+robot/include/\hyperlink{_omni_robot_8h}{Omni\+Robot.\+h}\item 
+/home/serge/\+Documents/\+Semester Project I\+N\+I/omnibot-\/lib/\+U\+S\+B\+\_\+robot/src/Omni\+Robot.\+cpp\end{DoxyCompactItemize}

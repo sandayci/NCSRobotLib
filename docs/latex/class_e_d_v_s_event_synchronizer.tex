@@ -1,0 +1,86 @@
+\hypertarget{class_e_d_v_s_event_synchronizer}{}\section{E\+D\+V\+S\+Event\+Synchronizer Class Reference}
+\label{class_e_d_v_s_event_synchronizer}\index{E\+D\+V\+S\+Event\+Synchronizer@{E\+D\+V\+S\+Event\+Synchronizer}}
+
+
+determines the offset between the timestamps from the E\+D\+V\+S and the computer  
+
+
+
+
+{\ttfamily \#include $<$E\+D\+V\+S\+Event\+Synchronizer.\+h$>$}
+
+
+
+Inheritance diagram for E\+D\+V\+S\+Event\+Synchronizer\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{class_e_d_v_s_event_synchronizer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for E\+D\+V\+S\+Event\+Synchronizer\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{class_e_d_v_s_event_synchronizer__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_e_d_v_s_event_synchronizer_a3aa2f9f7703a260c2ee77931a41e9a5d}{E\+D\+V\+S\+Event\+Synchronizer} (boost\+::chrono\+::system\+\_\+clock\+::time\+\_\+point orig\+\_\+ts)
+\item 
+\hypertarget{class_e_d_v_s_event_synchronizer_abf2c8deddd912203f1028d0da0898210}{}void \hyperlink{class_e_d_v_s_event_synchronizer_abf2c8deddd912203f1028d0da0898210}{received\+New\+E\+D\+V\+S4337\+Serial\+U\+S\+B\+Event} (\hyperlink{struct_e_d_v_s4337_serial_u_s_b_event}{E\+D\+V\+S4337\+Serial\+U\+S\+B\+Event} \&e)\label{class_e_d_v_s_event_synchronizer_abf2c8deddd912203f1028d0da0898210}
+
+\begin{DoxyCompactList}\small\item\em Is invoked when a new event is parsed from the event stream. \end{DoxyCompactList}\item 
+\hypertarget{class_e_d_v_s_event_synchronizer_ae87bfda7bd247daebf8e59d0044a755b}{}int \hyperlink{class_e_d_v_s_event_synchronizer_ae87bfda7bd247daebf8e59d0044a755b}{conv2\+D} (int x, int y)\label{class_e_d_v_s_event_synchronizer_ae87bfda7bd247daebf8e59d0044a755b}
+
+\begin{DoxyCompactList}\small\item\em converts the 2\+D point indices with respect to the current center of mass to an 1\+D index of an array \end{DoxyCompactList}\item 
+\hypertarget{class_e_d_v_s_event_synchronizer_a604261b8dc3e589b6ccde5b89db2dce2}{}void {\bfseries received\+New\+E\+D\+V\+S4337\+Serial\+U\+S\+B\+I\+M\+U\+Event} (\hyperlink{struct_e_d_v_s4337_serial_u_s_b_i_m_u_event}{E\+D\+V\+S4337\+Serial\+U\+S\+B\+I\+M\+U\+Event} \&e)\label{class_e_d_v_s_event_synchronizer_a604261b8dc3e589b6ccde5b89db2dce2}
+
+\item 
+\hypertarget{class_e_d_v_s_event_synchronizer_ad6d39f82fd21ab6fee7d1afebd8eb59b}{}void {\bfseries start} (void)\label{class_e_d_v_s_event_synchronizer_ad6d39f82fd21ab6fee7d1afebd8eb59b}
+
+\item 
+\hypertarget{class_e_d_v_s_event_synchronizer_a6062d70d3ce2982494fe7dfcaa0f220a}{}double \hyperlink{class_e_d_v_s_event_synchronizer_a6062d70d3ce2982494fe7dfcaa0f220a}{get\+\_\+time\+\_\+offset} ()\label{class_e_d_v_s_event_synchronizer_a6062d70d3ce2982494fe7dfcaa0f220a}
+
+\begin{DoxyCompactList}\small\item\em return the time offset between computer and e\+D\+V\+S in us \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_e_d_v_s_event_synchronizer_ac5ef909240b8e9dbb3ed30d8554aa23d}{}float {\bfseries m\+\_\+center\+Of\+Mass\+X}\label{class_e_d_v_s_event_synchronizer_ac5ef909240b8e9dbb3ed30d8554aa23d}
+
+\item 
+\hypertarget{class_e_d_v_s_event_synchronizer_a6f6cd3e456de1dda22c570f1cbbc9d55}{}float {\bfseries m\+\_\+center\+Of\+Mass\+Y}\label{class_e_d_v_s_event_synchronizer_a6f6cd3e456de1dda22c570f1cbbc9d55}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+determines the offset between the timestamps from the E\+D\+V\+S and the computer 
+
+This is needed as we need to synchronize all events from different sources, like E\+D\+V\+S, keyboard input and information from robots and other devices. To do this calibration a flashing window is displayed on the laptop and the e\+D\+V\+S has to be pointed to it. The calibration is then started by pressing the key \textquotesingle{}o\textquotesingle{}. For debugging purposes the events are displayed in a separate window, as well as the center of mass of the image. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_e_d_v_s_event_synchronizer_a3aa2f9f7703a260c2ee77931a41e9a5d}{}\index{E\+D\+V\+S\+Event\+Synchronizer@{E\+D\+V\+S\+Event\+Synchronizer}!E\+D\+V\+S\+Event\+Synchronizer@{E\+D\+V\+S\+Event\+Synchronizer}}
+\index{E\+D\+V\+S\+Event\+Synchronizer@{E\+D\+V\+S\+Event\+Synchronizer}!E\+D\+V\+S\+Event\+Synchronizer@{E\+D\+V\+S\+Event\+Synchronizer}}
+\subsubsection[{E\+D\+V\+S\+Event\+Synchronizer}]{\setlength{\rightskip}{0pt plus 5cm}E\+D\+V\+S\+Event\+Synchronizer\+::\+E\+D\+V\+S\+Event\+Synchronizer (
+\begin{DoxyParamCaption}
+\item[{boost\+::chrono\+::system\+\_\+clock\+::time\+\_\+point}]{orig\+\_\+ts}
+\end{DoxyParamCaption}
+)}\label{class_e_d_v_s_event_synchronizer_a3aa2f9f7703a260c2ee77931a41e9a5d}
+
+\begin{DoxyParams}{Parameters}
+{\em orig\+\_\+ts} & is the timestamp delivered by the computer \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/serge/\+Documents/\+Semester Project I\+N\+I/omnibot-\/lib/\+U\+S\+B\+\_\+robot/include/E\+D\+V\+S\+Event\+Synchronizer.\+h\item 
+/home/serge/\+Documents/\+Semester Project I\+N\+I/omnibot-\/lib/\+U\+S\+B\+\_\+robot/src/E\+D\+V\+S\+Event\+Synchronizer.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,89 @@
+\hypertarget{my_keyboard_listener_8h}{}\section{/home/serge/\+Documents/\+Semester Project I\+N\+I/omnibot-\/lib/\+U\+S\+B\+\_\+robot/include/my\+Keyboard\+Listener.h File Reference}
+\label{my_keyboard_listener_8h}\index{/home/serge/\+Documents/\+Semester Project I\+N\+I/omnibot-\/lib/\+U\+S\+B\+\_\+robot/include/my\+Keyboard\+Listener.\+h@{/home/serge/\+Documents/\+Semester Project I\+N\+I/omnibot-\/lib/\+U\+S\+B\+\_\+robot/include/my\+Keyboard\+Listener.\+h}}
+
+
+This file provides all the functions with respect to the keyboard listener.  
+
+
+{\ttfamily \#include \char`\"{}keyboard.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Robot.\+h\char`\"{}}\\*
+Include dependency graph for my\+Keyboard\+Listener.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{my_keyboard_listener_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{my_keyboard_listener_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structrobot_drive_parameters}{robot\+Drive\+Parameters}
+\item 
+class \hyperlink{classmy_keyboard_listener}{my\+Keyboard\+Listener}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{my_keyboard_listener_8h_a697eda8a48b6c3569bfda3fc77945a91}{bit\+Shifts} \{ \\*
+{\bfseries W\+\_\+\+S\+H\+I\+F\+T} = 0, 
+{\bfseries S\+\_\+\+S\+H\+I\+F\+T} = 1, 
+{\bfseries A\+\_\+\+S\+H\+I\+F\+T} = 2, 
+{\bfseries D\+\_\+\+S\+H\+I\+F\+T} = 3, 
+\\*
+{\bfseries Q\+\_\+\+S\+H\+I\+F\+T} = 4, 
+{\bfseries E\+\_\+\+S\+H\+I\+F\+T} = 5
+ \}
+\begin{DoxyCompactList}\small\item\em Mapping of the keystrokes. \end{DoxyCompactList}\item 
+\hypertarget{my_keyboard_listener_8h_ac18678639755b05ef7e572de6a55c70b}{}enum \hyperlink{my_keyboard_listener_8h_ac18678639755b05ef7e572de6a55c70b}{mapped\+Keys} \{ \\*
+{\bfseries \+\_\+\+K\+E\+Y\+\_\+\+W} = (1 $<$$<$ W\+\_\+\+S\+H\+I\+F\+T), 
+{\bfseries \+\_\+\+K\+E\+Y\+\_\+\+S} = (1 $<$$<$ S\+\_\+\+S\+H\+I\+F\+T), 
+{\bfseries \+\_\+\+K\+E\+Y\+\_\+\+A} = (1 $<$$<$ A\+\_\+\+S\+H\+I\+F\+T), 
+{\bfseries \+\_\+\+K\+E\+Y\+\_\+\+D} = (1 $<$$<$ D\+\_\+\+S\+H\+I\+F\+T), 
+\\*
+{\bfseries \+\_\+\+K\+E\+Y\+\_\+\+E} = (1 $<$$<$ E\+\_\+\+S\+H\+I\+F\+T), 
+{\bfseries \+\_\+\+K\+E\+Y\+\_\+\+Q} = (1 $<$$<$ Q\+\_\+\+S\+H\+I\+F\+T)
+ \}\label{my_keyboard_listener_8h_ac18678639755b05ef7e572de6a55c70b}
+
+\begin{DoxyCompactList}\small\item\em Mapping of the keystrokes to a more readably form. \end{DoxyCompactList}\item 
+\hypertarget{my_keyboard_listener_8h_a51cab4a82059c7fcbbd0baaff4b9901f}{}enum \hyperlink{my_keyboard_listener_8h_a51cab4a82059c7fcbbd0baaff4b9901f}{robot\+Directives} \{ \\*
+{\bfseries S\+T\+O\+P} = 0, 
+{\bfseries F\+O\+R\+W\+A\+R\+D} = \+\_\+\+K\+E\+Y\+\_\+\+W, 
+{\bfseries B\+A\+C\+K\+W\+A\+R\+D} = \+\_\+\+K\+E\+Y\+\_\+\+S, 
+{\bfseries L\+E\+F\+T} = \+\_\+\+K\+E\+Y\+\_\+\+A, 
+\\*
+{\bfseries R\+I\+G\+H\+T} = \+\_\+\+K\+E\+Y\+\_\+\+D, 
+{\bfseries T\+U\+R\+N\+\_\+\+C\+C\+W} = \+\_\+\+K\+E\+Y\+\_\+\+Q, 
+{\bfseries T\+U\+R\+N\+\_\+\+C\+W} = \+\_\+\+K\+E\+Y\+\_\+\+E, 
+{\bfseries F\+W\+R\+\_\+\+A\+R\+C\+\_\+\+R\+I\+G\+H\+T} = \+\_\+\+K\+E\+Y\+\_\+\+W + \+\_\+\+K\+E\+Y\+\_\+\+D, 
+\\*
+{\bfseries F\+W\+R\+\_\+\+A\+R\+C\+\_\+\+L\+E\+F\+T} = \+\_\+\+K\+E\+Y\+\_\+\+W + \+\_\+\+K\+E\+Y\+\_\+\+A, 
+{\bfseries B\+W\+R\+\_\+\+A\+R\+C\+\_\+\+R\+I\+G\+H\+T} = \+\_\+\+K\+E\+Y\+\_\+\+S + \+\_\+\+K\+E\+Y\+\_\+\+D, 
+{\bfseries B\+W\+R\+\_\+\+A\+R\+C\+\_\+\+L\+E\+F\+T} = \+\_\+\+K\+E\+Y\+\_\+\+S + \+\_\+\+K\+E\+Y\+\_\+\+A
+ \}\label{my_keyboard_listener_8h_a51cab4a82059c7fcbbd0baaff4b9901f}
+
+\begin{DoxyCompactList}\small\item\em Mapping of the keystrokes to drive directives for the robot. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file provides all the functions with respect to the keyboard listener. 
+
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{my_keyboard_listener_8h_a697eda8a48b6c3569bfda3fc77945a91}{}\index{my\+Keyboard\+Listener.\+h@{my\+Keyboard\+Listener.\+h}!bit\+Shifts@{bit\+Shifts}}
+\index{bit\+Shifts@{bit\+Shifts}!my\+Keyboard\+Listener.\+h@{my\+Keyboard\+Listener.\+h}}
+\subsubsection[{bit\+Shifts}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf bit\+Shifts}}\label{my_keyboard_listener_8h_a697eda8a48b6c3569bfda3fc77945a91}
+
+
+Mapping of the keystrokes. 
+
+Pressing a key results in setting a bit at the corresponding position in a int variable. This allows filtering keys with no mapping and storing the state of the key and detecting combinations of keys. Key presses map to bit = 1 and key releases to bit=0 at the respective bit position of the corresponding key as defined by bit\+Shifts. \begin{DoxySeeAlso}{See also}
+\hyperlink{my_keyboard_listener_8h_ac18678639755b05ef7e572de6a55c70b}{mapped\+Keys} 
+\end{DoxySeeAlso}

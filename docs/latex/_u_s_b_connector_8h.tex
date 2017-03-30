@@ -1,0 +1,56 @@
+\hypertarget{_u_s_b_connector_8h}{}\section{/home/serge/\+Documents/\+Semester Project I\+N\+I/omnibot-\/lib/\+U\+S\+B\+\_\+robot/include/\+U\+S\+B\+Connector.h File Reference}
+\label{_u_s_b_connector_8h}\index{/home/serge/\+Documents/\+Semester Project I\+N\+I/omnibot-\/lib/\+U\+S\+B\+\_\+robot/include/\+U\+S\+B\+Connector.\+h@{/home/serge/\+Documents/\+Semester Project I\+N\+I/omnibot-\/lib/\+U\+S\+B\+\_\+robot/include/\+U\+S\+B\+Connector.\+h}}
+
+
+This file provides all the necessary functions to open a serial port to a U\+S\+B connected device.  
+
+
+{\ttfamily \#include $<$linux/serial.\+h$>$}\\*
+{\ttfamily \#include $<$termio.\+h$>$}\\*
+{\ttfamily \#include $<$Log\+Wrapper.\+h$>$}\\*
+Include dependency graph for U\+S\+B\+Connector.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{_u_s_b_connector_8h__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{_u_s_b_connector_8h_a1762dd5ceb7cca8e14e100486f1681e4}{get\+U\+S\+B\+File\+Descriptor} (char const $\ast$port\+\_\+name=\char`\"{}/dev/tty\+U\+S\+B0\char`\"{}, unsigned int arg\+\_\+baudrate=2000000, std\+::string dev\+Name=\char`\"{}Device\char`\"{})
+\begin{DoxyCompactList}\small\item\em Opens and configures the serial port. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file provides all the necessary functions to open a serial port to a U\+S\+B connected device. 
+
+This is possible because the camera an robot are fitted with an F\+T\+D\+I chip. 
+
+\subsection{Function Documentation}
+\hypertarget{_u_s_b_connector_8h_a1762dd5ceb7cca8e14e100486f1681e4}{}\index{U\+S\+B\+Connector.\+h@{U\+S\+B\+Connector.\+h}!get\+U\+S\+B\+File\+Descriptor@{get\+U\+S\+B\+File\+Descriptor}}
+\index{get\+U\+S\+B\+File\+Descriptor@{get\+U\+S\+B\+File\+Descriptor}!U\+S\+B\+Connector.\+h@{U\+S\+B\+Connector.\+h}}
+\subsubsection[{get\+U\+S\+B\+File\+Descriptor}]{\setlength{\rightskip}{0pt plus 5cm}int get\+U\+S\+B\+File\+Descriptor (
+\begin{DoxyParamCaption}
+\item[{char const $\ast$}]{port\+\_\+name = {\ttfamily \char`\"{}/dev/ttyUSB0\char`\"{}}, }
+\item[{unsigned int}]{arg\+\_\+baudrate = {\ttfamily 2000000}, }
+\item[{std\+::string}]{dev\+Name = {\ttfamily \char`\"{}Device\char`\"{}}}
+\end{DoxyParamCaption}
+)}\label{_u_s_b_connector_8h_a1762dd5ceb7cca8e14e100486f1681e4}
+
+
+Opens and configures the serial port. 
+
+The requested device is opened with read and write enabled. The requested baudrate is set and the serial port configured to be in raw mode, non-\/blocking and with hardware control enabled. For more information see also here\+: \begin{DoxySeeAlso}{See also}
+\href{http://inilabs.com/support/hardware/edvs/#h.2v48aal08cim}{\tt http\+://inilabs.\+com/support/hardware/edvs/\#h.\+2v48aal08cim} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em port\+\_\+name} & the name of the port is device is connected to, as listed under \textquotesingle{}ls /dev/\textquotesingle{} \\
+\hline
+{\em arg\+\_\+baudrate} & the requested communication baudrate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+if successful return a valid file descriptr to the port, else -\/1. 
+\end{DoxyReturn}

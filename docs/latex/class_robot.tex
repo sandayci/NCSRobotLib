@@ -1,0 +1,118 @@
+\hypertarget{class_robot}{}\section{Robot Class Reference}
+\label{class_robot}\index{Robot@{Robot}}
+
+
+Abstact base class defining the required interface to robot.  
+
+
+
+
+{\ttfamily \#include $<$Robot.\+h$>$}
+
+
+
+Inheritance diagram for Robot\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_robot__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Robot\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{class_robot__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_robot_aa23c8bfa375d4f817afd7e2f6ae045f0}{}\hyperlink{class_robot_aa23c8bfa375d4f817afd7e2f6ae045f0}{Robot} (int file\+Descriptor)\label{class_robot_aa23c8bfa375d4f817afd7e2f6ae045f0}
+
+\begin{DoxyCompactList}\small\item\em The constructor takes a valid file file descriptor. \end{DoxyCompactList}\item 
+\hypertarget{class_robot_adf034063ea4f50ad8bc80dff10c52fbd}{}void \hyperlink{class_robot_adf034063ea4f50ad8bc80dff10c52fbd}{register\+Listener} (\hyperlink{class_robot_listener}{Robot\+Listener} $\ast$)\label{class_robot_adf034063ea4f50ad8bc80dff10c52fbd}
+
+\begin{DoxyCompactList}\small\item\em register a Listener to this robot \end{DoxyCompactList}\item 
+\hypertarget{class_robot_a50bfeaa82bcdae08e2b92c1ab0308e9c}{}void \hyperlink{class_robot_a50bfeaa82bcdae08e2b92c1ab0308e9c}{deregister\+Listener} (\hyperlink{class_robot_listener}{Robot\+Listener} $\ast$)\label{class_robot_a50bfeaa82bcdae08e2b92c1ab0308e9c}
+
+\begin{DoxyCompactList}\small\item\em degregister a specific listener \end{DoxyCompactList}\item 
+\hypertarget{class_robot_a6713c453dde16f83b1368fce66130228}{}int \hyperlink{class_robot_a6713c453dde16f83b1368fce66130228}{listen} ()\label{class_robot_a6713c453dde16f83b1368fce66130228}
+
+\begin{DoxyCompactList}\small\item\em start listening to new events from the data stream received \end{DoxyCompactList}\item 
+\hypertarget{class_robot_ad0dc163ea28c82cb52ed53e9da913368}{}int \hyperlink{class_robot_ad0dc163ea28c82cb52ed53e9da913368}{stop\+Listening} ()\label{class_robot_ad0dc163ea28c82cb52ed53e9da913368}
+
+\begin{DoxyCompactList}\small\item\em stop listening \end{DoxyCompactList}\item 
+\hypertarget{class_robot_a091253a377e3f6944616ee0f0fad8941}{}int \hyperlink{class_robot_a091253a377e3f6944616ee0f0fad8941}{close} ()\label{class_robot_a091253a377e3f6944616ee0f0fad8941}
+
+\begin{DoxyCompactList}\small\item\em close the serial port \end{DoxyCompactList}\item 
+\hypertarget{class_robot_a89c1fc16ed3ae6bb3162837b1fbf689a}{}virtual bool \hyperlink{class_robot_a89c1fc16ed3ae6bb3162837b1fbf689a}{twitch} ()=0\label{class_robot_a89c1fc16ed3ae6bb3162837b1fbf689a}
+
+\begin{DoxyCompactList}\small\item\em check the robot when starting up \end{DoxyCompactList}\item 
+\hypertarget{class_robot_ac09d08242ccbdd6c4bc68bfe689759f0}{}virtual void \hyperlink{class_robot_ac09d08242ccbdd6c4bc68bfe689759f0}{process\+Keys} (int keys\+Pressed)=0\label{class_robot_ac09d08242ccbdd6c4bc68bfe689759f0}
+
+\begin{DoxyCompactList}\small\item\em process logged keystrokes and triggers the required action \end{DoxyCompactList}\item 
+\hypertarget{class_robot_a7dcc9de1f4a64894bdc047efd5db8a2b}{}virtual void \hyperlink{class_robot_a7dcc9de1f4a64894bdc047efd5db8a2b}{parse} (unsigned char $\ast$data, int bytes\+Read)=0\label{class_robot_a7dcc9de1f4a64894bdc047efd5db8a2b}
+
+\begin{DoxyCompactList}\small\item\em Parses the commands of interest from the input. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_robot_a394e0a75b695970a8d67edb86d9c6b57}{}void \hyperlink{class_robot_a394e0a75b695970a8d67edb86d9c6b57}{warn\+Event} (std\+::queue$<$ \hyperlink{structservo_signals}{servo\+Signals} $>$ \&, std\+::queue$<$ \hyperlink{structbumper}{bumper} $>$ \&)\label{class_robot_a394e0a75b695970a8d67edb86d9c6b57}
+
+\begin{DoxyCompactList}\small\item\em Notifies all the registered listeners that an event has occured. \end{DoxyCompactList}\item 
+\hypertarget{class_robot_a55d36d87b7b3826fc5f495359c5472fd}{}int \hyperlink{class_robot_a55d36d87b7b3826fc5f495359c5472fd}{send\+Command} (std\+::string cmd)\label{class_robot_a55d36d87b7b3826fc5f495359c5472fd}
+
+\begin{DoxyCompactList}\small\item\em send a command to the device, is the same for a serial or a T\+C\+P device \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_robot_af159507f5d8069107a54fd31965cb65d}{}static void {\bfseries thread\+Loop} (boost\+::asio\+::deadline\+\_\+timer $\ast$, int $\ast$, void $\ast$)\label{class_robot_af159507f5d8069107a54fd31965cb65d}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_robot_a7f81941312c87b38ef5c60f02d565bcb}{}boost\+::thread $\ast$ {\bfseries read\+Thread}\label{class_robot_a7f81941312c87b38ef5c60f02d565bcb}
+
+\item 
+\hypertarget{class_robot_ac6e92828eb711facd7fe88fa9e80961c}{}int {\bfseries m\+\_\+read\+Thread\+Status}\label{class_robot_ac6e92828eb711facd7fe88fa9e80961c}
+
+\item 
+\hypertarget{class_robot_aa8835ee41157aeab028a0aaeff133890}{}boost\+::asio\+::io\+\_\+service $\ast$ {\bfseries ios}\label{class_robot_aa8835ee41157aeab028a0aaeff133890}
+
+\item 
+\hypertarget{class_robot_a1adb110a11b739f6627dcf4ca8798817}{}boost\+::asio\+::deadline\+\_\+timer $\ast$ {\bfseries read\+Timer}\label{class_robot_a1adb110a11b739f6627dcf4ca8798817}
+
+\item 
+\hypertarget{class_robot_a379696f4a6eb66246569e3833fc2f271}{}bool {\bfseries m\+\_\+toggle\+Listening}\label{class_robot_a379696f4a6eb66246569e3833fc2f271}
+
+\item 
+\hypertarget{class_robot_a7c1c1ec2aa764902fe2cbe814f612df9}{}std\+::list$<$ \hyperlink{class_robot_listener}{Robot\+Listener} $\ast$ $>$ \hyperlink{class_robot_a7c1c1ec2aa764902fe2cbe814f612df9}{m\+\_\+listeners}\label{class_robot_a7c1c1ec2aa764902fe2cbe814f612df9}
+
+\begin{DoxyCompactList}\small\item\em Registered listeners. \end{DoxyCompactList}\item 
+\hypertarget{class_robot_aefb0abbfc6681d039e188892c137d689}{}int {\bfseries m\+\_\+status}\label{class_robot_aefb0abbfc6681d039e188892c137d689}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_robot_af6a64b83d24e0f46636946e9a0a0ccd3}{}static const int {\bfseries T\+E\+R\+M\+I\+N\+A\+T\+E\+\_\+\+T\+H\+R\+E\+A\+D} = -\/1\label{class_robot_af6a64b83d24e0f46636946e9a0a0ccd3}
+
+\item 
+\hypertarget{class_robot_a30926b9d988efb171a32cb1855bfa594}{}static const int {\bfseries R\+U\+N\+\_\+\+T\+H\+R\+E\+A\+D} = 1\label{class_robot_a30926b9d988efb171a32cb1855bfa594}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Abstact base class defining the required interface to robot. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/serge/\+Documents/\+Semester Project I\+N\+I/omnibot-\/lib/\+U\+S\+B\+\_\+robot/include/Robot.\+h\item 
+/home/serge/\+Documents/\+Semester Project I\+N\+I/omnibot-\/lib/\+U\+S\+B\+\_\+robot/src/Robot.\+cpp\end{DoxyCompactItemize}

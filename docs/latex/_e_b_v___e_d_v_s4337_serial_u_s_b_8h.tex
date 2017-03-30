@@ -1,0 +1,145 @@
+\hypertarget{_e_b_v___e_d_v_s4337_serial_u_s_b_8h}{}\section{/home/serge/\+Documents/\+Semester Project I\+N\+I/omnibot-\/lib/\+U\+S\+B\+\_\+robot/include/\+E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.h File Reference}
+\label{_e_b_v___e_d_v_s4337_serial_u_s_b_8h}\index{/home/serge/\+Documents/\+Semester Project I\+N\+I/omnibot-\/lib/\+U\+S\+B\+\_\+robot/include/\+E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h@{/home/serge/\+Documents/\+Semester Project I\+N\+I/omnibot-\/lib/\+U\+S\+B\+\_\+robot/include/\+E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h}}
+
+
+provides the necessary interface for communication and listening to the e\+D\+V\+S camera and the embedded I\+M\+U  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$termios.\+h$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$list$>$}\\*
+{\ttfamily \#include $<$Log\+Wrapper.\+h$>$}\\*
+Include dependency graph for E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_e_b_v___e_d_v_s4337_serial_u_s_b_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_e_b_v___e_d_v_s4337_serial_u_s_b_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{struct_e_d_v_s4337_serial_u_s_b_event}{E\+D\+V\+S4337\+Serial\+U\+S\+B\+Event}
+\begin{DoxyCompactList}\small\item\em encapsulates the camera events parsed from the event stream coming from the e\+D\+V\+S. \end{DoxyCompactList}\item 
+class \hyperlink{struct_e_d_v_s4337_serial_u_s_b_i_m_u_event}{E\+D\+V\+S4337\+Serial\+U\+S\+B\+I\+M\+U\+Event}
+\begin{DoxyCompactList}\small\item\em encapsulates the I\+M\+U events parsed from the event stream coming from the e\+D\+V\+S. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_e_d_v_s4337_serial_u_s_b_biases}{E\+D\+V\+S4337\+Serial\+U\+S\+B\+Biases}
+\begin{DoxyCompactList}\small\item\em encapsulates the values for the biases and stores them in an array with the help of the biases\+\_\+t enum for better readability. \end{DoxyCompactList}\item 
+class \hyperlink{class_e_d_v_s4337_serial_u_s_b_listener}{E\+D\+V\+S4337\+Serial\+U\+S\+B\+Listener}
+\begin{DoxyCompactList}\small\item\em abstract base class for a listener that observers e\+D\+V\+S events \end{DoxyCompactList}\item 
+class \hyperlink{class_e_d_v_s4337_serial_u_s_b_i_m_u_listener}{E\+D\+V\+S4337\+Serial\+U\+S\+B\+I\+M\+U\+Listener}
+\begin{DoxyCompactList}\small\item\em abstract base class for a listener that observers I\+M\+U events \end{DoxyCompactList}\item 
+struct \hyperlink{struct_e_d_v_s4337_serial_u_s_b_args}{E\+D\+V\+S4337\+Serial\+U\+S\+B\+Args}
+\begin{DoxyCompactList}\small\item\em encapsulates the necessary arguments to start reading from the serial port in a new Threading \end{DoxyCompactList}\item 
+class \hyperlink{class_e_d_v_s4337_serial_u_s_b}{E\+D\+V\+S4337\+Serial\+U\+S\+B}
+\begin{DoxyCompactList}\small\item\em Class providing the necessary interfaces for communication and event streaming from the e\+D\+V\+S camera. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{_e_b_v___e_d_v_s4337_serial_u_s_b_8h_a0580b5f9d6ec67f7bb47b4f52cff0cfd}{biases\+\_\+t} \{ \\*
+\hyperlink{_e_b_v___e_d_v_s4337_serial_u_s_b_8h_a0580b5f9d6ec67f7bb47b4f52cff0cfdab1ff1fca6e9f99e11dd50c90b79b003e}{C\+A\+S}, 
+\hyperlink{_e_b_v___e_d_v_s4337_serial_u_s_b_8h_a0580b5f9d6ec67f7bb47b4f52cff0cfda5e94bdfd0950671d324a2b2bf66bc870}{I\+N\+J\+\_\+\+G\+N\+D}, 
+\hyperlink{_e_b_v___e_d_v_s4337_serial_u_s_b_8h_a0580b5f9d6ec67f7bb47b4f52cff0cfdad6fa580bd5459cac89665a87b806a9ed}{R\+E\+Q\+\_\+\+P\+D}, 
+\hyperlink{_e_b_v___e_d_v_s4337_serial_u_s_b_8h_a0580b5f9d6ec67f7bb47b4f52cff0cfda0accf91ca0b9dae6110871c69587921f}{P\+U\+\_\+\+X}, 
+\\*
+\hyperlink{_e_b_v___e_d_v_s4337_serial_u_s_b_8h_a0580b5f9d6ec67f7bb47b4f52cff0cfdaea81793d8e8675252e00fd9f4c5d3cf0}{D\+I\+F\+F\+\_\+\+O\+F\+F}, 
+\hyperlink{_e_b_v___e_d_v_s4337_serial_u_s_b_8h_a0580b5f9d6ec67f7bb47b4f52cff0cfdab64fee4faebf865dbe5c0a5c444a0fa3}{R\+E\+Q}, 
+\hyperlink{_e_b_v___e_d_v_s4337_serial_u_s_b_8h_a0580b5f9d6ec67f7bb47b4f52cff0cfda3d5742d3e7cd7a959af35fe0a3def065}{R\+E\+F\+R}, 
+\hyperlink{_e_b_v___e_d_v_s4337_serial_u_s_b_8h_a0580b5f9d6ec67f7bb47b4f52cff0cfda06d6d56211d52afc38dcab004b37a0b5}{P\+U\+\_\+\+Y}, 
+\\*
+\hyperlink{_e_b_v___e_d_v_s4337_serial_u_s_b_8h_a0580b5f9d6ec67f7bb47b4f52cff0cfdaf0c8bbff2a26f14a7a49d910174d0501}{D\+I\+F\+F\+\_\+\+O\+N}, 
+\hyperlink{_e_b_v___e_d_v_s4337_serial_u_s_b_8h_a0580b5f9d6ec67f7bb47b4f52cff0cfdaa5d305f703cfce63b982a4cba74f64ec}{D\+I\+F\+F}, 
+\hyperlink{_e_b_v___e_d_v_s4337_serial_u_s_b_8h_a0580b5f9d6ec67f7bb47b4f52cff0cfda24e93623f9d4a47c59ab2bd5f063ce47}{F\+O\+L\+L}, 
+\hyperlink{_e_b_v___e_d_v_s4337_serial_u_s_b_8h_a0580b5f9d6ec67f7bb47b4f52cff0cfda9c17aec256007f966da3c8dabfd5bcb8}{P\+R}
+ \}
+\begin{DoxyCompactList}\small\item\em defines the biases necessary for proper e\+D\+V\+S initialization \end{DoxyCompactList}\item 
+enum \hyperlink{_e_b_v___e_d_v_s4337_serial_u_s_b_8h_a2b0bc356728b430ea3809f44d9be46c1}{Event\+Format} \{ \\*
+\hyperlink{_e_b_v___e_d_v_s4337_serial_u_s_b_8h_a2b0bc356728b430ea3809f44d9be46c1ac1bb60616b27745112e0ee86c7b09a14}{E\+V\+T\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+E0}, 
+\hyperlink{_e_b_v___e_d_v_s4337_serial_u_s_b_8h_a2b0bc356728b430ea3809f44d9be46c1a0ee9623f1f89fac7e52b79b021603a19}{E\+V\+T\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+E1}, 
+\hyperlink{_e_b_v___e_d_v_s4337_serial_u_s_b_8h_a2b0bc356728b430ea3809f44d9be46c1aa4df9541c0c1b3cb55aa9fe9b6d35397}{E\+V\+T\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+E2}, 
+\hyperlink{_e_b_v___e_d_v_s4337_serial_u_s_b_8h_a2b0bc356728b430ea3809f44d9be46c1ae27a60feed3cbdfe6e68ac2e02e787f5}{E\+V\+T\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+E3}, 
+\\*
+\hyperlink{_e_b_v___e_d_v_s4337_serial_u_s_b_8h_a2b0bc356728b430ea3809f44d9be46c1a8bb2de3763cc82614e6785daad63e7e6}{E\+V\+T\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+E4}
+ \}
+\begin{DoxyCompactList}\small\item\em provides all the event formats that are supported by this camers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+provides the necessary interface for communication and listening to the e\+D\+V\+S camera and the embedded I\+M\+U 
+
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{_e_b_v___e_d_v_s4337_serial_u_s_b_8h_a0580b5f9d6ec67f7bb47b4f52cff0cfd}{}\index{E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h@{E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h}!biases\+\_\+t@{biases\+\_\+t}}
+\index{biases\+\_\+t@{biases\+\_\+t}!E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h@{E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h}}
+\subsubsection[{biases\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf biases\+\_\+t}}\label{_e_b_v___e_d_v_s4337_serial_u_s_b_8h_a0580b5f9d6ec67f7bb47b4f52cff0cfd}
+
+
+defines the biases necessary for proper e\+D\+V\+S initialization 
+
+\begin{DoxySeeAlso}{See also}
+here for more information\+: \href{http://inilabs.com/support/hardware/biasing/#h.khgrv1ecqm5q}{\tt http\+://inilabs.\+com/support/hardware/biasing/\#h.\+khgrv1ecqm5q} 
+\end{DoxySeeAlso}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{C\+A\+S@{C\+A\+S}!E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h@{E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h}}\index{E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h@{E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h}!C\+A\+S@{C\+A\+S}}\item[{\em 
+\hypertarget{_e_b_v___e_d_v_s4337_serial_u_s_b_8h_a0580b5f9d6ec67f7bb47b4f52cff0cfdab1ff1fca6e9f99e11dd50c90b79b003e}{}C\+A\+S\label{_e_b_v___e_d_v_s4337_serial_u_s_b_8h_a0580b5f9d6ec67f7bb47b4f52cff0cfdab1ff1fca6e9f99e11dd50c90b79b003e}
+}]First stage cascode. \index{I\+N\+J\+\_\+\+G\+N\+D@{I\+N\+J\+\_\+\+G\+N\+D}!E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h@{E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h}}\index{E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h@{E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h}!I\+N\+J\+\_\+\+G\+N\+D@{I\+N\+J\+\_\+\+G\+N\+D}}\item[{\em 
+\hypertarget{_e_b_v___e_d_v_s4337_serial_u_s_b_8h_a0580b5f9d6ec67f7bb47b4f52cff0cfda5e94bdfd0950671d324a2b2bf66bc870}{}I\+N\+J\+\_\+\+G\+N\+D\label{_e_b_v___e_d_v_s4337_serial_u_s_b_8h_a0580b5f9d6ec67f7bb47b4f52cff0cfda5e94bdfd0950671d324a2b2bf66bc870}
+}]Injected ground. \index{R\+E\+Q\+\_\+\+P\+D@{R\+E\+Q\+\_\+\+P\+D}!E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h@{E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h}}\index{E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h@{E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h}!R\+E\+Q\+\_\+\+P\+D@{R\+E\+Q\+\_\+\+P\+D}}\item[{\em 
+\hypertarget{_e_b_v___e_d_v_s4337_serial_u_s_b_8h_a0580b5f9d6ec67f7bb47b4f52cff0cfdad6fa580bd5459cac89665a87b806a9ed}{}R\+E\+Q\+\_\+\+P\+D\label{_e_b_v___e_d_v_s4337_serial_u_s_b_8h_a0580b5f9d6ec67f7bb47b4f52cff0cfdad6fa580bd5459cac89665a87b806a9ed}
+}]Pull down on chip request. \index{P\+U\+\_\+\+X@{P\+U\+\_\+\+X}!E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h@{E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h}}\index{E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h@{E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h}!P\+U\+\_\+\+X@{P\+U\+\_\+\+X}}\item[{\em 
+\hypertarget{_e_b_v___e_d_v_s4337_serial_u_s_b_8h_a0580b5f9d6ec67f7bb47b4f52cff0cfda0accf91ca0b9dae6110871c69587921f}{}P\+U\+\_\+\+X\label{_e_b_v___e_d_v_s4337_serial_u_s_b_8h_a0580b5f9d6ec67f7bb47b4f52cff0cfda0accf91ca0b9dae6110871c69587921f}
+}]Pull up on request from X arbiter. \index{D\+I\+F\+F\+\_\+\+O\+F\+F@{D\+I\+F\+F\+\_\+\+O\+F\+F}!E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h@{E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h}}\index{E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h@{E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h}!D\+I\+F\+F\+\_\+\+O\+F\+F@{D\+I\+F\+F\+\_\+\+O\+F\+F}}\item[{\em 
+\hypertarget{_e_b_v___e_d_v_s4337_serial_u_s_b_8h_a0580b5f9d6ec67f7bb47b4f52cff0cfdaea81793d8e8675252e00fd9f4c5d3cf0}{}D\+I\+F\+F\+\_\+\+O\+F\+F\label{_e_b_v___e_d_v_s4337_serial_u_s_b_8h_a0580b5f9d6ec67f7bb47b4f52cff0cfdaea81793d8e8675252e00fd9f4c5d3cf0}
+}]Threshold for Off events. \index{R\+E\+Q@{R\+E\+Q}!E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h@{E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h}}\index{E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h@{E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h}!R\+E\+Q@{R\+E\+Q}}\item[{\em 
+\hypertarget{_e_b_v___e_d_v_s4337_serial_u_s_b_8h_a0580b5f9d6ec67f7bb47b4f52cff0cfdab64fee4faebf865dbe5c0a5c444a0fa3}{}R\+E\+Q\label{_e_b_v___e_d_v_s4337_serial_u_s_b_8h_a0580b5f9d6ec67f7bb47b4f52cff0cfdab64fee4faebf865dbe5c0a5c444a0fa3}
+}]Pull down for passive load inverters in digital A\+E\+R pixel circuitry. \index{R\+E\+F\+R@{R\+E\+F\+R}!E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h@{E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h}}\index{E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h@{E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h}!R\+E\+F\+R@{R\+E\+F\+R}}\item[{\em 
+\hypertarget{_e_b_v___e_d_v_s4337_serial_u_s_b_8h_a0580b5f9d6ec67f7bb47b4f52cff0cfda3d5742d3e7cd7a959af35fe0a3def065}{}R\+E\+F\+R\label{_e_b_v___e_d_v_s4337_serial_u_s_b_8h_a0580b5f9d6ec67f7bb47b4f52cff0cfda3d5742d3e7cd7a959af35fe0a3def065}
+}]Refractory period. \index{P\+U\+\_\+\+Y@{P\+U\+\_\+\+Y}!E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h@{E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h}}\index{E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h@{E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h}!P\+U\+\_\+\+Y@{P\+U\+\_\+\+Y}}\item[{\em 
+\hypertarget{_e_b_v___e_d_v_s4337_serial_u_s_b_8h_a0580b5f9d6ec67f7bb47b4f52cff0cfda06d6d56211d52afc38dcab004b37a0b5}{}P\+U\+\_\+\+Y\label{_e_b_v___e_d_v_s4337_serial_u_s_b_8h_a0580b5f9d6ec67f7bb47b4f52cff0cfda06d6d56211d52afc38dcab004b37a0b5}
+}]Pull up on request from X arbiter. \index{D\+I\+F\+F\+\_\+\+O\+N@{D\+I\+F\+F\+\_\+\+O\+N}!E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h@{E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h}}\index{E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h@{E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h}!D\+I\+F\+F\+\_\+\+O\+N@{D\+I\+F\+F\+\_\+\+O\+N}}\item[{\em 
+\hypertarget{_e_b_v___e_d_v_s4337_serial_u_s_b_8h_a0580b5f9d6ec67f7bb47b4f52cff0cfdaf0c8bbff2a26f14a7a49d910174d0501}{}D\+I\+F\+F\+\_\+\+O\+N\label{_e_b_v___e_d_v_s4337_serial_u_s_b_8h_a0580b5f9d6ec67f7bb47b4f52cff0cfdaf0c8bbff2a26f14a7a49d910174d0501}
+}]Threshold for On events. \index{D\+I\+F\+F@{D\+I\+F\+F}!E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h@{E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h}}\index{E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h@{E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h}!D\+I\+F\+F@{D\+I\+F\+F}}\item[{\em 
+\hypertarget{_e_b_v___e_d_v_s4337_serial_u_s_b_8h_a0580b5f9d6ec67f7bb47b4f52cff0cfdaa5d305f703cfce63b982a4cba74f64ec}{}D\+I\+F\+F\label{_e_b_v___e_d_v_s4337_serial_u_s_b_8h_a0580b5f9d6ec67f7bb47b4f52cff0cfdaa5d305f703cfce63b982a4cba74f64ec}
+}]Second stage (“\+Differential”) \index{F\+O\+L\+L@{F\+O\+L\+L}!E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h@{E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h}}\index{E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h@{E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h}!F\+O\+L\+L@{F\+O\+L\+L}}\item[{\em 
+\hypertarget{_e_b_v___e_d_v_s4337_serial_u_s_b_8h_a0580b5f9d6ec67f7bb47b4f52cff0cfda24e93623f9d4a47c59ab2bd5f063ce47}{}F\+O\+L\+L\label{_e_b_v___e_d_v_s4337_serial_u_s_b_8h_a0580b5f9d6ec67f7bb47b4f52cff0cfda24e93623f9d4a47c59ab2bd5f063ce47}
+}]Source follower separating first and second stages. \index{P\+R@{P\+R}!E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h@{E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h}}\index{E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h@{E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h}!P\+R@{P\+R}}\item[{\em 
+\hypertarget{_e_b_v___e_d_v_s4337_serial_u_s_b_8h_a0580b5f9d6ec67f7bb47b4f52cff0cfda9c17aec256007f966da3c8dabfd5bcb8}{}P\+R\label{_e_b_v___e_d_v_s4337_serial_u_s_b_8h_a0580b5f9d6ec67f7bb47b4f52cff0cfda9c17aec256007f966da3c8dabfd5bcb8}
+}]First stage (“\+Photoreceptor”) \end{description}
+\end{Desc}
+\hypertarget{_e_b_v___e_d_v_s4337_serial_u_s_b_8h_a2b0bc356728b430ea3809f44d9be46c1}{}\index{E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h@{E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h}!Event\+Format@{Event\+Format}}
+\index{Event\+Format@{Event\+Format}!E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h@{E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h}}
+\subsubsection[{Event\+Format}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Event\+Format}}\label{_e_b_v___e_d_v_s4337_serial_u_s_b_8h_a2b0bc356728b430ea3809f44d9be46c1}
+
+
+provides all the event formats that are supported by this camers. 
+
+\begin{DoxySeeAlso}{See also}
+here for a more detailed explanation\+: \href{http://inilabs.com/support/hardware/edvs/#h.az1ycqjvj6jm}{\tt http\+://inilabs.\+com/support/hardware/edvs/\#h.\+az1ycqjvj6jm} 
+\end{DoxySeeAlso}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{E\+V\+T\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+E0@{E\+V\+T\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+E0}!E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h@{E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h}}\index{E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h@{E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h}!E\+V\+T\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+E0@{E\+V\+T\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+E0}}\item[{\em 
+\hypertarget{_e_b_v___e_d_v_s4337_serial_u_s_b_8h_a2b0bc356728b430ea3809f44d9be46c1ac1bb60616b27745112e0ee86c7b09a14}{}E\+V\+T\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+E0\label{_e_b_v___e_d_v_s4337_serial_u_s_b_8h_a2b0bc356728b430ea3809f44d9be46c1ac1bb60616b27745112e0ee86c7b09a14}
+}]2 Bytes per evt (no timestamp) \index{E\+V\+T\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+E1@{E\+V\+T\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+E1}!E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h@{E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h}}\index{E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h@{E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h}!E\+V\+T\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+E1@{E\+V\+T\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+E1}}\item[{\em 
+\hypertarget{_e_b_v___e_d_v_s4337_serial_u_s_b_8h_a2b0bc356728b430ea3809f44d9be46c1a0ee9623f1f89fac7e52b79b021603a19}{}E\+V\+T\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+E1\label{_e_b_v___e_d_v_s4337_serial_u_s_b_8h_a2b0bc356728b430ea3809f44d9be46c1a0ee9623f1f89fac7e52b79b021603a19}
+}]3..5 bytes per event, 1..3 bytes delta-\/timestamp (7bits each) \index{E\+V\+T\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+E2@{E\+V\+T\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+E2}!E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h@{E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h}}\index{E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h@{E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h}!E\+V\+T\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+E2@{E\+V\+T\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+E2}}\item[{\em 
+\hypertarget{_e_b_v___e_d_v_s4337_serial_u_s_b_8h_a2b0bc356728b430ea3809f44d9be46c1aa4df9541c0c1b3cb55aa9fe9b6d35397}{}E\+V\+T\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+E2\label{_e_b_v___e_d_v_s4337_serial_u_s_b_8h_a2b0bc356728b430ea3809f44d9be46c1aa4df9541c0c1b3cb55aa9fe9b6d35397}
+}]4 Bytes per evt (16 bits ts, 1us res) \index{E\+V\+T\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+E3@{E\+V\+T\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+E3}!E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h@{E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h}}\index{E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h@{E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h}!E\+V\+T\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+E3@{E\+V\+T\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+E3}}\item[{\em 
+\hypertarget{_e_b_v___e_d_v_s4337_serial_u_s_b_8h_a2b0bc356728b430ea3809f44d9be46c1ae27a60feed3cbdfe6e68ac2e02e787f5}{}E\+V\+T\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+E3\label{_e_b_v___e_d_v_s4337_serial_u_s_b_8h_a2b0bc356728b430ea3809f44d9be46c1ae27a60feed3cbdfe6e68ac2e02e787f5}
+}]5 Bytes per evt (24 bits ts, 1us res) \index{E\+V\+T\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+E4@{E\+V\+T\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+E4}!E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h@{E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h}}\index{E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h@{E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h}!E\+V\+T\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+E4@{E\+V\+T\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+E4}}\item[{\em 
+\hypertarget{_e_b_v___e_d_v_s4337_serial_u_s_b_8h_a2b0bc356728b430ea3809f44d9be46c1a8bb2de3763cc82614e6785daad63e7e6}{}E\+V\+T\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+E4\label{_e_b_v___e_d_v_s4337_serial_u_s_b_8h_a2b0bc356728b430ea3809f44d9be46c1a8bb2de3763cc82614e6785daad63e7e6}
+}]6 Bytes per evt (32 bits ts, 1us res) \end{description}
+\end{Desc}

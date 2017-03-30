@@ -1,0 +1,61 @@
+\hypertarget{classmy_log_listener_e_d_v_s}{}\section{my\+Log\+Listener\+E\+D\+V\+S Class Reference}
+\label{classmy_log_listener_e_d_v_s}\index{my\+Log\+Listener\+E\+D\+V\+S@{my\+Log\+Listener\+E\+D\+V\+S}}
+
+
+This class provides a concrete implementation of a e\+D\+V\+S event listener that logs the received events to a file.  
+
+
+
+
+{\ttfamily \#include $<$my\+Log\+Listener\+E\+D\+V\+S.\+h$>$}
+
+
+
+Inheritance diagram for my\+Log\+Listener\+E\+D\+V\+S\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{classmy_log_listener_e_d_v_s__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for my\+Log\+Listener\+E\+D\+V\+S\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{classmy_log_listener_e_d_v_s__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classmy_log_listener_e_d_v_s_acf61bf49fd9cf235a4498411b44e9aa2}{}\hyperlink{classmy_log_listener_e_d_v_s_acf61bf49fd9cf235a4498411b44e9aa2}{my\+Log\+Listener\+E\+D\+V\+S} ()\label{classmy_log_listener_e_d_v_s_acf61bf49fd9cf235a4498411b44e9aa2}
+
+\begin{DoxyCompactList}\small\item\em constructor, takeas also care of opening a log file. \end{DoxyCompactList}\item 
+\hypertarget{classmy_log_listener_e_d_v_s_ac2c38d50f2e0830ac3f4433608939997}{}\hyperlink{classmy_log_listener_e_d_v_s_ac2c38d50f2e0830ac3f4433608939997}{$\sim$my\+Log\+Listener\+E\+D\+V\+S} ()\label{classmy_log_listener_e_d_v_s_ac2c38d50f2e0830ac3f4433608939997}
+
+\begin{DoxyCompactList}\small\item\em destructor, flushes the reamining events to the file and closes the file. \end{DoxyCompactList}\item 
+\hypertarget{classmy_log_listener_e_d_v_s_a1777d000440b6f85d49dd49ff89b2429}{}void \hyperlink{classmy_log_listener_e_d_v_s_a1777d000440b6f85d49dd49ff89b2429}{received\+New\+E\+D\+V\+S4337\+Serial\+U\+S\+B\+Event} (\hyperlink{struct_e_d_v_s4337_serial_u_s_b_event}{E\+D\+V\+S4337\+Serial\+U\+S\+B\+Event} \&e)\label{classmy_log_listener_e_d_v_s_a1777d000440b6f85d49dd49ff89b2429}
+
+\begin{DoxyCompactList}\small\item\em events come one by one, \end{DoxyCompactList}\item 
+\hypertarget{classmy_log_listener_e_d_v_s_a765267309b967a51266bec88b618dae4}{}void \hyperlink{classmy_log_listener_e_d_v_s_a765267309b967a51266bec88b618dae4}{flush} ()\label{classmy_log_listener_e_d_v_s_a765267309b967a51266bec88b618dae4}
+
+\begin{DoxyCompactList}\small\item\em writes all remaining events to the log file \end{DoxyCompactList}\item 
+\hypertarget{classmy_log_listener_e_d_v_s_a98d36489262e95d277ba8183443d2b85}{}void \hyperlink{classmy_log_listener_e_d_v_s_a98d36489262e95d277ba8183443d2b85}{set\+\_\+offset} (double dt)\label{classmy_log_listener_e_d_v_s_a98d36489262e95d277ba8183443d2b85}
+
+\begin{DoxyCompactList}\small\item\em e\+D\+V\+S has an ofset with respect to the clock of the host computer and therefore the keyboard and robot events \end{DoxyCompactList}\item 
+\hypertarget{classmy_log_listener_e_d_v_s_aca2a9088907f9b0ab265aa4d3cd32ba4}{}void \hyperlink{classmy_log_listener_e_d_v_s_aca2a9088907f9b0ab265aa4d3cd32ba4}{toggle\+Logging} ()\label{classmy_log_listener_e_d_v_s_aca2a9088907f9b0ab265aa4d3cd32ba4}
+
+\begin{DoxyCompactList}\small\item\em toggle logging \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class provides a concrete implementation of a e\+D\+V\+S event listener that logs the received events to a file. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/serge/\+Documents/\+Semester Project I\+N\+I/omnibot-\/lib/\+U\+S\+B\+\_\+robot/include/\hyperlink{my_log_listener_e_d_v_s_8h}{my\+Log\+Listener\+E\+D\+V\+S.\+h}\item 
+/home/serge/\+Documents/\+Semester Project I\+N\+I/omnibot-\/lib/\+U\+S\+B\+\_\+robot/src/my\+Log\+Listener\+E\+D\+V\+S.\+cpp\end{DoxyCompactItemize}

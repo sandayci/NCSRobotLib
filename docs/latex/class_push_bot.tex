@@ -1,0 +1,83 @@
+\hypertarget{class_push_bot}{}\section{Push\+Bot Class Reference}
+\label{class_push_bot}\index{Push\+Bot@{Push\+Bot}}
+
+
+Mid-\/\+Level interface to the \hyperlink{class_push_bot}{Push\+Bot}. Communnication via Wi\+Fi.  
+
+
+
+
+{\ttfamily \#include $<$Push\+Bot.\+h$>$}
+
+
+
+Inheritance diagram for Push\+Bot\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{class_push_bot__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Push\+Bot\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{class_push_bot__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_push_bot_a9f01f2663700a2894c0cb52651ec7a8b}{Push\+Bot} (int file\+Descriptor)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hypertarget{class_push_bot_a14e806fd8d5b1757440147099a393b2e}{}bool \hyperlink{class_push_bot_a14e806fd8d5b1757440147099a393b2e}{set\+Right\+Velocity} (int)\label{class_push_bot_a14e806fd8d5b1757440147099a393b2e}
+
+\begin{DoxyCompactList}\small\item\em set the velocity of the right wheel \end{DoxyCompactList}\item 
+\hypertarget{class_push_bot_aede73ab503b5732df67126a4322074f6}{}bool \hyperlink{class_push_bot_aede73ab503b5732df67126a4322074f6}{set\+Left\+Velocity} (int)\label{class_push_bot_aede73ab503b5732df67126a4322074f6}
+
+\begin{DoxyCompactList}\small\item\em set the velocity of the left wheel \end{DoxyCompactList}\item 
+\hypertarget{class_push_bot_aeac29d4529c93c2cabbfaab4a7358480}{}bool \hyperlink{class_push_bot_aeac29d4529c93c2cabbfaab4a7358480}{twitch} ()\label{class_push_bot_aeac29d4529c93c2cabbfaab4a7358480}
+
+\begin{DoxyCompactList}\small\item\em check if the servos are working \end{DoxyCompactList}\item 
+\hypertarget{class_push_bot_a55ab1fbdf79449dd45cc1d666da9e607}{}bool \hyperlink{class_push_bot_a55ab1fbdf79449dd45cc1d666da9e607}{enable\+Motors} ()\label{class_push_bot_a55ab1fbdf79449dd45cc1d666da9e607}
+
+\begin{DoxyCompactList}\small\item\em start the motors up \end{DoxyCompactList}\item 
+\hypertarget{class_push_bot_ae5ebe6028f68a35849a5d7802a1c154e}{}void \hyperlink{class_push_bot_ae5ebe6028f68a35849a5d7802a1c154e}{parse} (unsigned char $\ast$, int)\label{class_push_bot_ae5ebe6028f68a35849a5d7802a1c154e}
+
+\begin{DoxyCompactList}\small\item\em parse message \end{DoxyCompactList}\item 
+\hypertarget{class_push_bot_a9d898a09d60c5f8c34f8fd437c5d3b24}{}void \hyperlink{class_push_bot_a9d898a09d60c5f8c34f8fd437c5d3b24}{process\+Keys} (int keys\+Pressed)\label{class_push_bot_a9d898a09d60c5f8c34f8fd437c5d3b24}
+
+\begin{DoxyCompactList}\small\item\em process key strokes logged from the keyboard \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Mid-\/\+Level interface to the \hyperlink{class_push_bot}{Push\+Bot}. Communnication via Wi\+Fi. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_push_bot_a9f01f2663700a2894c0cb52651ec7a8b}{}\index{Push\+Bot@{Push\+Bot}!Push\+Bot@{Push\+Bot}}
+\index{Push\+Bot@{Push\+Bot}!Push\+Bot@{Push\+Bot}}
+\subsubsection[{Push\+Bot}]{\setlength{\rightskip}{0pt plus 5cm}Push\+Bot\+::\+Push\+Bot (
+\begin{DoxyParamCaption}
+\item[{int}]{file\+Descriptor}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_push_bot_a9f01f2663700a2894c0cb52651ec7a8b}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Descriptor} & file descriptor to a successfully opened socket to the push\+Bot \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/serge/\+Documents/\+Semester Project I\+N\+I/omnibot-\/lib/\+U\+S\+B\+\_\+robot/include/\hyperlink{_push_bot_8h}{Push\+Bot.\+h}\item 
+/home/serge/\+Documents/\+Semester Project I\+N\+I/omnibot-\/lib/\+U\+S\+B\+\_\+robot/src/Push\+Bot.\+cpp\end{DoxyCompactItemize}

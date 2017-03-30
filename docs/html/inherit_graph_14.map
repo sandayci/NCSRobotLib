@@ -1,0 +1,4 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$class_robot_listener.html" title="Abstarct base class providing the necessary interface to observe the servo states and bumper states o..." alt="" coords="5,5,108,32"/>
+<area shape="rect" id="node2" href="$classmy_log_listener_robot.html" title="Provides a concrete implementation of the abstract RobotListener to receive the servo states and the ..." alt="" coords="156,5,299,32"/>
+</map>

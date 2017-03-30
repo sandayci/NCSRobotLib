@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['sendbiases',['sendBiases',['../class_e_d_v_s4337_serial_u_s_b.html#af09e53dfaa5b511faf6992e47aa8b970',1,'EDVS4337SerialUSB']]],
+  ['sendcommand',['sendCommand',['../class_robot.html#a55d36d87b7b3826fc5f495359c5472fd',1,'Robot']]],
+  ['servosignals',['servoSignals',['../structservo_signals.html',1,'']]],
+  ['set_5foffset',['set_offset',['../classmy_log_listener_e_d_v_s.html#a98d36489262e95d277ba8183443d2b85',1,'myLogListenerEDVS']]],
+  ['set_5ftime_5forigin',['set_time_origin',['../class_omni_robot.html#a899ff538efad531b391e84182a6ed961',1,'OmniRobot']]],
+  ['setleftvelocity',['setLeftVelocity',['../class_push_bot.html#aede73ab503b5732df67126a4322074f6',1,'PushBot']]],
+  ['setrightvelocity',['setRightVelocity',['../class_push_bot.html#a14e806fd8d5b1757440147099a393b2e',1,'PushBot']]],
+  ['setrobotdrivestate',['setRobotDriveState',['../class_omni_robot.html#a5ccec8006487e526b20e7a5f69255c00',1,'OmniRobot']]],
+  ['setservospeed',['setServoSpeed',['../class_omni_robot.html#a4db727ee61666148106e302e90956bd3',1,'OmniRobot']]],
+  ['setservospeeds',['setServoSpeeds',['../class_omni_robot.html#a2f3365750b17b172ef265fb94e25c73a',1,'OmniRobot']]],
+  ['setservotorque',['setServoTorque',['../class_omni_robot.html#a01e9c0201e9bcd1ff6b3f3039e910937',1,'OmniRobot']]],
+  ['startedvs',['startEDVS',['../class_e_d_v_s4337_serial_u_s_b.html#a69696b4657eb069eaa54f88a77e88cae',1,'EDVS4337SerialUSB']]],
+  ['startimu',['startIMU',['../class_e_d_v_s4337_serial_u_s_b.html#aac0296a78f69948dbf43611425998e23',1,'EDVS4337SerialUSB']]],
+  ['startlogging',['startLogging',['../class_omni_robot.html#ad7b2e7cf5cca375cfc9ba047264dfcad',1,'OmniRobot']]],
+  ['stopedvsandimu',['stopEDVSAndIMU',['../class_e_d_v_s4337_serial_u_s_b.html#aa2d18776b99e4171f20e8814093bbe14',1,'EDVS4337SerialUSB']]],
+  ['stopimu',['stopIMU',['../class_e_d_v_s4337_serial_u_s_b.html#ad7cd708dd39311ac007d30927e335a5b',1,'EDVS4337SerialUSB']]],
+  ['stoplistening',['stopListening',['../class_e_d_v_s4337_serial_u_s_b.html#ae219efb04db44707bf67928f986969d1',1,'EDVS4337SerialUSB::stopListening()'],['../classc_keyboard.html#a6eb520c368e14d18fc417531c5c0b809',1,'cKeyboard::stopListening()'],['../class_robot.html#ad0dc163ea28c82cb52ed53e9da913368',1,'Robot::stopListening()']]]
+];

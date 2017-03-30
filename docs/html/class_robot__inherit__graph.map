@@ -1,0 +1,4 @@
+<map id="Robot" name="Robot">
+<area shape="rect" id="node2" href="$class_omni_robot.html" title="Interface to the OmniRob from NST. " alt="" coords="5,424,152,648"/>
+<area shape="rect" id="node3" href="$class_push_bot.html" title="Mid&#45;Level interface to the PushBot. Communnication via WiFi. " alt="" coords="176,453,315,619"/>
+</map>

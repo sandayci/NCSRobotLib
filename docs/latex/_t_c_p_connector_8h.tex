@@ -1,0 +1,42 @@
+\hypertarget{_t_c_p_connector_8h}{}\section{/home/serge/\+Documents/\+Semester Project I\+N\+I/omnibot-\/lib/\+U\+S\+B\+\_\+robot/include/\+T\+C\+P\+Connector.h File Reference}
+\label{_t_c_p_connector_8h}\index{/home/serge/\+Documents/\+Semester Project I\+N\+I/omnibot-\/lib/\+U\+S\+B\+\_\+robot/include/\+T\+C\+P\+Connector.\+h@{/home/serge/\+Documents/\+Semester Project I\+N\+I/omnibot-\/lib/\+U\+S\+B\+\_\+robot/include/\+T\+C\+P\+Connector.\+h}}
+
+
+All the functions managing communications over T\+C\+P/\+I\+P are defined here.  
+
+
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{_t_c_p_connector_8h_a29b7caffa5e8a2a25691b19d7cd8204a}{get\+T\+C\+P\+File\+Descriptor} (const char $\ast$hostname, unsigned int portno)
+\begin{DoxyCompactList}\small\item\em Opens a file descriptor to a T\+C\+P socket. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+All the functions managing communications over T\+C\+P/\+I\+P are defined here. 
+
+
+
+\subsection{Function Documentation}
+\hypertarget{_t_c_p_connector_8h_a29b7caffa5e8a2a25691b19d7cd8204a}{}\index{T\+C\+P\+Connector.\+h@{T\+C\+P\+Connector.\+h}!get\+T\+C\+P\+File\+Descriptor@{get\+T\+C\+P\+File\+Descriptor}}
+\index{get\+T\+C\+P\+File\+Descriptor@{get\+T\+C\+P\+File\+Descriptor}!T\+C\+P\+Connector.\+h@{T\+C\+P\+Connector.\+h}}
+\subsubsection[{get\+T\+C\+P\+File\+Descriptor}]{\setlength{\rightskip}{0pt plus 5cm}int get\+T\+C\+P\+File\+Descriptor (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{hostname, }
+\item[{unsigned int}]{portno}
+\end{DoxyParamCaption}
+)}\label{_t_c_p_connector_8h_a29b7caffa5e8a2a25691b19d7cd8204a}
+
+
+Opens a file descriptor to a T\+C\+P socket. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hostname} & The name of the device we want to connect to (I\+P addess for example) \\
+\hline
+{\em portno} & Number of the port we want to connect to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+if successful, a File Descriptor to the opened devive, else -\/1. 
+\end{DoxyReturn}

@@ -1,0 +1,37 @@
+\hypertarget{keyboard_8h}{}\section{/home/serge/\+Documents/\+Semester Project I\+N\+I/omnibot-\/lib/\+U\+S\+B\+\_\+robot/include/keyboard.h File Reference}
+\label{keyboard_8h}\index{/home/serge/\+Documents/\+Semester Project I\+N\+I/omnibot-\/lib/\+U\+S\+B\+\_\+robot/include/keyboard.\+h@{/home/serge/\+Documents/\+Semester Project I\+N\+I/omnibot-\/lib/\+U\+S\+B\+\_\+robot/include/keyboard.\+h}}
+
+
+This file contains all the necessary interfaces to log keystrokes from the keyboard. One drawback is that all keystrokes are logged, even if the window is not in focus.  
+
+
+{\ttfamily \#include $<$linux/input.\+h$>$}\\*
+{\ttfamily \#include $<$list$>$}\\*
+Include dependency graph for keyboard.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=210pt]{keyboard_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{keyboard_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_keyboard_listener}{Keyboard\+Listener}
+\begin{DoxyCompactList}\small\item\em Provides the necessary interface to Listen to keyboard events. \end{DoxyCompactList}\item 
+struct \hyperlink{structkeyboard__state}{keyboard\+\_\+state}
+\begin{DoxyCompactList}\small\item\em encapsulates the states of all the avaiable keyboard keys \end{DoxyCompactList}\item 
+class \hyperlink{classc_keyboard}{c\+Keyboard}
+\begin{DoxyCompactList}\small\item\em Manages the communication with an attached keyboard. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file contains all the necessary interfaces to log keystrokes from the keyboard. One drawback is that all keystrokes are logged, even if the window is not in focus. 
+

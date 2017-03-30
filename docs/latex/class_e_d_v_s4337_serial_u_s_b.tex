@@ -1,0 +1,191 @@
+\hypertarget{class_e_d_v_s4337_serial_u_s_b}{}\section{E\+D\+V\+S4337\+Serial\+U\+S\+B Class Reference}
+\label{class_e_d_v_s4337_serial_u_s_b}\index{E\+D\+V\+S4337\+Serial\+U\+S\+B@{E\+D\+V\+S4337\+Serial\+U\+S\+B}}
+
+
+Class providing the necessary interfaces for communication and event streaming from the e\+D\+V\+S camera.  
+
+
+
+
+{\ttfamily \#include $<$E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h$>$}
+
+
+
+Collaboration diagram for E\+D\+V\+S4337\+Serial\+U\+S\+B\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{class_e_d_v_s4337_serial_u_s_b__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_e_d_v_s4337_serial_u_s_b_ab5f0ccc2d17dff50b7d282693db5f8e1}{E\+D\+V\+S4337\+Serial\+U\+S\+B} (int)
+\begin{DoxyCompactList}\small\item\em constructor of the \hyperlink{class_e_d_v_s4337_serial_u_s_b}{E\+D\+V\+S4337\+Serial\+U\+S\+B} \end{DoxyCompactList}\item 
+\hypertarget{class_e_d_v_s4337_serial_u_s_b_a69696b4657eb069eaa54f88a77e88cae}{}int \hyperlink{class_e_d_v_s4337_serial_u_s_b_a69696b4657eb069eaa54f88a77e88cae}{start\+E\+D\+V\+S} ()\label{class_e_d_v_s4337_serial_u_s_b_a69696b4657eb069eaa54f88a77e88cae}
+
+\begin{DoxyCompactList}\small\item\em starts the e\+D\+V\+S by setting the necessary biases \end{DoxyCompactList}\item 
+\hypertarget{class_e_d_v_s4337_serial_u_s_b_aa2d18776b99e4171f20e8814093bbe14}{}int \hyperlink{class_e_d_v_s4337_serial_u_s_b_aa2d18776b99e4171f20e8814093bbe14}{stop\+E\+D\+V\+S\+And\+I\+M\+U} ()\label{class_e_d_v_s4337_serial_u_s_b_aa2d18776b99e4171f20e8814093bbe14}
+
+\begin{DoxyCompactList}\small\item\em stops the started e\+D\+V\+S and the I\+M\+U \end{DoxyCompactList}\item 
+\hypertarget{class_e_d_v_s4337_serial_u_s_b_a944eee88553b63a6b0be88b0288e9199}{}int \hyperlink{class_e_d_v_s4337_serial_u_s_b_a944eee88553b63a6b0be88b0288e9199}{listen} ()\label{class_e_d_v_s4337_serial_u_s_b_a944eee88553b63a6b0be88b0288e9199}
+
+\begin{DoxyCompactList}\small\item\em start listening to the events parsed from the event stream \end{DoxyCompactList}\item 
+\hypertarget{class_e_d_v_s4337_serial_u_s_b_ae219efb04db44707bf67928f986969d1}{}int \hyperlink{class_e_d_v_s4337_serial_u_s_b_ae219efb04db44707bf67928f986969d1}{stop\+Listening} ()\label{class_e_d_v_s4337_serial_u_s_b_ae219efb04db44707bf67928f986969d1}
+
+\begin{DoxyCompactList}\small\item\em stop listening to the events parsed from the event stream \end{DoxyCompactList}\item 
+int \hyperlink{class_e_d_v_s4337_serial_u_s_b_aebb4071c2c8b81771460e8381016c3a0}{is\+Init} ()
+\begin{DoxyCompactList}\small\item\em checks if the camera is correctly initialized \end{DoxyCompactList}\item 
+\hypertarget{class_e_d_v_s4337_serial_u_s_b_a3d1cfe0acb88ab31523477519df51f17}{}int \hyperlink{class_e_d_v_s4337_serial_u_s_b_a3d1cfe0acb88ab31523477519df51f17}{close} ()\label{class_e_d_v_s4337_serial_u_s_b_a3d1cfe0acb88ab31523477519df51f17}
+
+\begin{DoxyCompactList}\small\item\em closes the serial Port to the e\+D\+V\+S camera \end{DoxyCompactList}\item 
+int \hyperlink{class_e_d_v_s4337_serial_u_s_b_a34bbef40b445d99ea326fda021235079}{change\+Event\+Format} (\hyperlink{_e_b_v___e_d_v_s4337_serial_u_s_b_8h_a2b0bc356728b430ea3809f44d9be46c1}{Event\+Format})
+\begin{DoxyCompactList}\small\item\em changes the event format of the events \end{DoxyCompactList}\item 
+int \hyperlink{class_e_d_v_s4337_serial_u_s_b_af09e53dfaa5b511faf6992e47aa8b970}{send\+Biases} (\hyperlink{struct_e_d_v_s4337_serial_u_s_b_biases}{E\+D\+V\+S4337\+Serial\+U\+S\+B\+Biases} b=\hyperlink{struct_e_d_v_s4337_serial_u_s_b_biases}{E\+D\+V\+S4337\+Serial\+U\+S\+B\+Biases}())
+\begin{DoxyCompactList}\small\item\em send biases to the camera \end{DoxyCompactList}\item 
+\hypertarget{class_e_d_v_s4337_serial_u_s_b_a327ddd8ac04b7e69ba01bd90ae49f040}{}\hyperlink{struct_e_d_v_s4337_serial_u_s_b_biases}{E\+D\+V\+S4337\+Serial\+U\+S\+B\+Biases} \hyperlink{class_e_d_v_s4337_serial_u_s_b_a327ddd8ac04b7e69ba01bd90ae49f040}{get\+Biases} ()\label{class_e_d_v_s4337_serial_u_s_b_a327ddd8ac04b7e69ba01bd90ae49f040}
+
+\begin{DoxyCompactList}\small\item\em get the current biases \end{DoxyCompactList}\item 
+\hypertarget{class_e_d_v_s4337_serial_u_s_b_a205afab634036c014dcb84184746635c}{}void \hyperlink{class_e_d_v_s4337_serial_u_s_b_a205afab634036c014dcb84184746635c}{register\+Listener} (\hyperlink{class_e_d_v_s4337_serial_u_s_b_listener}{E\+D\+V\+S4337\+Serial\+U\+S\+B\+Listener} $\ast$listener)\label{class_e_d_v_s4337_serial_u_s_b_a205afab634036c014dcb84184746635c}
+
+\begin{DoxyCompactList}\small\item\em Register an event listener. \end{DoxyCompactList}\item 
+void \hyperlink{class_e_d_v_s4337_serial_u_s_b_a327a91b0d54282de0ae8fdcc47e15b0a}{deregister\+Listener} (\hyperlink{class_e_d_v_s4337_serial_u_s_b_listener}{E\+D\+V\+S4337\+Serial\+U\+S\+B\+Listener} $\ast$listener)
+\begin{DoxyCompactList}\small\item\em deregister a specific event listener. \end{DoxyCompactList}\item 
+void \hyperlink{class_e_d_v_s4337_serial_u_s_b_a78e3c01f241b7e40debd7be4556d69c3}{register\+I\+M\+U\+Listener} (\hyperlink{class_e_d_v_s4337_serial_u_s_b_i_m_u_listener}{E\+D\+V\+S4337\+Serial\+U\+S\+B\+I\+M\+U\+Listener} $\ast$listener)
+\item 
+\hypertarget{class_e_d_v_s4337_serial_u_s_b_a4f46c52151f14a417c3051554e6d55c9}{}void {\bfseries deregister\+I\+M\+U\+Listener} (\hyperlink{class_e_d_v_s4337_serial_u_s_b_i_m_u_listener}{E\+D\+V\+S4337\+Serial\+U\+S\+B\+I\+M\+U\+Listener} $\ast$listener)\label{class_e_d_v_s4337_serial_u_s_b_a4f46c52151f14a417c3051554e6d55c9}
+
+\item 
+\hypertarget{class_e_d_v_s4337_serial_u_s_b_abddef8a14c7460309a50ab8087c96c35}{}void \hyperlink{class_e_d_v_s4337_serial_u_s_b_abddef8a14c7460309a50ab8087c96c35}{warn\+Event} (std\+::vector$<$ \hyperlink{struct_e_d_v_s4337_serial_u_s_b_event}{E\+D\+V\+S4337\+Serial\+U\+S\+B\+Event} $>$ \&events)\label{class_e_d_v_s4337_serial_u_s_b_abddef8a14c7460309a50ab8087c96c35}
+
+\begin{DoxyCompactList}\small\item\em Notify all the event listeners that an event as occured. \end{DoxyCompactList}\item 
+\hypertarget{class_e_d_v_s4337_serial_u_s_b_a8428d013f20a418abd24f48b89f0b128}{}void \hyperlink{class_e_d_v_s4337_serial_u_s_b_a8428d013f20a418abd24f48b89f0b128}{warn\+I\+M\+U\+Event} (std\+::vector$<$ \hyperlink{struct_e_d_v_s4337_serial_u_s_b_i_m_u_event}{E\+D\+V\+S4337\+Serial\+U\+S\+B\+I\+M\+U\+Event} $>$ \&events)\label{class_e_d_v_s4337_serial_u_s_b_a8428d013f20a418abd24f48b89f0b128}
+
+\begin{DoxyCompactList}\small\item\em Notify all the I\+M\+U event listeners that an event as occured. \end{DoxyCompactList}\item 
+\hypertarget{class_e_d_v_s4337_serial_u_s_b_aac0296a78f69948dbf43611425998e23}{}void \hyperlink{class_e_d_v_s4337_serial_u_s_b_aac0296a78f69948dbf43611425998e23}{start\+I\+M\+U} (E\+D\+V\+S4337\+Serial\+U\+S\+B\+I\+M\+U\+Event\+::\+I\+M\+U\+Type, int)\label{class_e_d_v_s4337_serial_u_s_b_aac0296a78f69948dbf43611425998e23}
+
+\begin{DoxyCompactList}\small\item\em starts the I\+M\+U by sending the necessary commands \end{DoxyCompactList}\item 
+\hypertarget{class_e_d_v_s4337_serial_u_s_b_ad7cd708dd39311ac007d30927e335a5b}{}void \hyperlink{class_e_d_v_s4337_serial_u_s_b_ad7cd708dd39311ac007d30927e335a5b}{stop\+I\+M\+U} (E\+D\+V\+S4337\+Serial\+U\+S\+B\+I\+M\+U\+Event\+::\+I\+M\+U\+Type)\label{class_e_d_v_s4337_serial_u_s_b_ad7cd708dd39311ac007d30927e335a5b}
+
+\begin{DoxyCompactList}\small\item\em starts the I\+M\+U by sending the necessary commands \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_e_d_v_s4337_serial_u_s_b_a97c4bc902063509a0934e0aa07a3a0c2}{}static const int \hyperlink{class_e_d_v_s4337_serial_u_s_b_a97c4bc902063509a0934e0aa07a3a0c2}{T\+E\+R\+M\+I\+N\+A\+T\+E\+\_\+\+T\+H\+R\+E\+A\+D} = -\/1\label{class_e_d_v_s4337_serial_u_s_b_a97c4bc902063509a0934e0aa07a3a0c2}
+
+\begin{DoxyCompactList}\small\item\em Flag indicating when to stop the reading thread. \end{DoxyCompactList}\item 
+\hypertarget{class_e_d_v_s4337_serial_u_s_b_a89f3d76801ef1b50641ecb6cd5c7e113}{}static const int \hyperlink{class_e_d_v_s4337_serial_u_s_b_a89f3d76801ef1b50641ecb6cd5c7e113}{R\+U\+N\+\_\+\+T\+H\+R\+E\+A\+D} = 1\label{class_e_d_v_s4337_serial_u_s_b_a89f3d76801ef1b50641ecb6cd5c7e113}
+
+\begin{DoxyCompactList}\small\item\em Flag indicating when to start the reading thread. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class providing the necessary interfaces for communication and event streaming from the e\+D\+V\+S camera. 
+
+The e\+D\+V\+S camera is fitted with a F\+T\+D\+I chip, such that the camera can be opened and handeled like a serial port, despite the connection is established via U\+S\+B. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_e_d_v_s4337_serial_u_s_b_ab5f0ccc2d17dff50b7d282693db5f8e1}{}\index{E\+D\+V\+S4337\+Serial\+U\+S\+B@{E\+D\+V\+S4337\+Serial\+U\+S\+B}!E\+D\+V\+S4337\+Serial\+U\+S\+B@{E\+D\+V\+S4337\+Serial\+U\+S\+B}}
+\index{E\+D\+V\+S4337\+Serial\+U\+S\+B@{E\+D\+V\+S4337\+Serial\+U\+S\+B}!E\+D\+V\+S4337\+Serial\+U\+S\+B@{E\+D\+V\+S4337\+Serial\+U\+S\+B}}
+\subsubsection[{E\+D\+V\+S4337\+Serial\+U\+S\+B}]{\setlength{\rightskip}{0pt plus 5cm}E\+D\+V\+S4337\+Serial\+U\+S\+B\+::\+E\+D\+V\+S4337\+Serial\+U\+S\+B (
+\begin{DoxyParamCaption}
+\item[{int}]{file\+Descriptor}
+\end{DoxyParamCaption}
+)}\label{class_e_d_v_s4337_serial_u_s_b_ab5f0ccc2d17dff50b7d282693db5f8e1}
+
+
+constructor of the \hyperlink{class_e_d_v_s4337_serial_u_s_b}{E\+D\+V\+S4337\+Serial\+U\+S\+B} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & valid file descriptor to the e\+D\+V\+S camera \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_e_d_v_s4337_serial_u_s_b_a34bbef40b445d99ea326fda021235079}{}\index{E\+D\+V\+S4337\+Serial\+U\+S\+B@{E\+D\+V\+S4337\+Serial\+U\+S\+B}!change\+Event\+Format@{change\+Event\+Format}}
+\index{change\+Event\+Format@{change\+Event\+Format}!E\+D\+V\+S4337\+Serial\+U\+S\+B@{E\+D\+V\+S4337\+Serial\+U\+S\+B}}
+\subsubsection[{change\+Event\+Format}]{\setlength{\rightskip}{0pt plus 5cm}int E\+D\+V\+S4337\+Serial\+U\+S\+B\+::change\+Event\+Format (
+\begin{DoxyParamCaption}
+\item[{{\bf Event\+Format}}]{fmt}
+\end{DoxyParamCaption}
+)}\label{class_e_d_v_s4337_serial_u_s_b_a34bbef40b445d99ea326fda021235079}
+
+
+changes the event format of the events 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{_e_b_v___e_d_v_s4337_serial_u_s_b_8h_a2b0bc356728b430ea3809f44d9be46c1}{Event\+Format} for the supported events 
+\end{DoxySeeAlso}
+\hypertarget{class_e_d_v_s4337_serial_u_s_b_a327a91b0d54282de0ae8fdcc47e15b0a}{}\index{E\+D\+V\+S4337\+Serial\+U\+S\+B@{E\+D\+V\+S4337\+Serial\+U\+S\+B}!deregister\+Listener@{deregister\+Listener}}
+\index{deregister\+Listener@{deregister\+Listener}!E\+D\+V\+S4337\+Serial\+U\+S\+B@{E\+D\+V\+S4337\+Serial\+U\+S\+B}}
+\subsubsection[{deregister\+Listener}]{\setlength{\rightskip}{0pt plus 5cm}void E\+D\+V\+S4337\+Serial\+U\+S\+B\+::deregister\+Listener (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+D\+V\+S4337\+Serial\+U\+S\+B\+Listener} $\ast$}]{listener}
+\end{DoxyParamCaption}
+)}\label{class_e_d_v_s4337_serial_u_s_b_a327a91b0d54282de0ae8fdcc47e15b0a}
+
+
+deregister a specific event listener. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em listener} & specifies the listener to be removed \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_e_d_v_s4337_serial_u_s_b_aebb4071c2c8b81771460e8381016c3a0}{}\index{E\+D\+V\+S4337\+Serial\+U\+S\+B@{E\+D\+V\+S4337\+Serial\+U\+S\+B}!is\+Init@{is\+Init}}
+\index{is\+Init@{is\+Init}!E\+D\+V\+S4337\+Serial\+U\+S\+B@{E\+D\+V\+S4337\+Serial\+U\+S\+B}}
+\subsubsection[{is\+Init}]{\setlength{\rightskip}{0pt plus 5cm}int E\+D\+V\+S4337\+Serial\+U\+S\+B\+::is\+Init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_e_d_v_s4337_serial_u_s_b_aebb4071c2c8b81771460e8381016c3a0}
+
+
+checks if the camera is correctly initialized 
+
+\begin{DoxyReturn}{Returns}
+1 if the camera has been corectly initialized, else -\/1 
+\end{DoxyReturn}
+\hypertarget{class_e_d_v_s4337_serial_u_s_b_a78e3c01f241b7e40debd7be4556d69c3}{}\index{E\+D\+V\+S4337\+Serial\+U\+S\+B@{E\+D\+V\+S4337\+Serial\+U\+S\+B}!register\+I\+M\+U\+Listener@{register\+I\+M\+U\+Listener}}
+\index{register\+I\+M\+U\+Listener@{register\+I\+M\+U\+Listener}!E\+D\+V\+S4337\+Serial\+U\+S\+B@{E\+D\+V\+S4337\+Serial\+U\+S\+B}}
+\subsubsection[{register\+I\+M\+U\+Listener}]{\setlength{\rightskip}{0pt plus 5cm}void E\+D\+V\+S4337\+Serial\+U\+S\+B\+::register\+I\+M\+U\+Listener (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+D\+V\+S4337\+Serial\+U\+S\+B\+I\+M\+U\+Listener} $\ast$}]{listener}
+\end{DoxyParamCaption}
+)}\label{class_e_d_v_s4337_serial_u_s_b_a78e3c01f241b7e40debd7be4556d69c3}
+Register an I\+M\+U event listener deregister a specific I\+M\+U event listener.
+
+
+\begin{DoxyParams}{Parameters}
+{\em listener} & specifies the listener to be removed \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_e_d_v_s4337_serial_u_s_b_af09e53dfaa5b511faf6992e47aa8b970}{}\index{E\+D\+V\+S4337\+Serial\+U\+S\+B@{E\+D\+V\+S4337\+Serial\+U\+S\+B}!send\+Biases@{send\+Biases}}
+\index{send\+Biases@{send\+Biases}!E\+D\+V\+S4337\+Serial\+U\+S\+B@{E\+D\+V\+S4337\+Serial\+U\+S\+B}}
+\subsubsection[{send\+Biases}]{\setlength{\rightskip}{0pt plus 5cm}int E\+D\+V\+S4337\+Serial\+U\+S\+B\+::send\+Biases (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+D\+V\+S4337\+Serial\+U\+S\+B\+Biases}}]{b = {\ttfamily {\bf E\+D\+V\+S4337\+Serial\+U\+S\+B\+Biases}()}}
+\end{DoxyParamCaption}
+)}\label{class_e_d_v_s4337_serial_u_s_b_af09e53dfaa5b511faf6992e47aa8b970}
+
+
+send biases to the camera 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{struct_e_d_v_s4337_serial_u_s_b_biases}{E\+D\+V\+S4337\+Serial\+U\+S\+B\+Biases}} & b is struct with the values of the biases to be set. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{_e_b_v___e_d_v_s4337_serial_u_s_b_8h_a0580b5f9d6ec67f7bb47b4f52cff0cfd}{biases\+\_\+t} for all the biases that can be manipulated 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/serge/\+Documents/\+Semester Project I\+N\+I/omnibot-\/lib/\+U\+S\+B\+\_\+robot/include/\hyperlink{_e_b_v___e_d_v_s4337_serial_u_s_b_8h}{E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+h}\item 
+/home/serge/\+Documents/\+Semester Project I\+N\+I/omnibot-\/lib/\+U\+S\+B\+\_\+robot/src/E\+B\+V\+\_\+\+E\+D\+V\+S4337\+Serial\+U\+S\+B.\+cpp\end{DoxyCompactItemize}

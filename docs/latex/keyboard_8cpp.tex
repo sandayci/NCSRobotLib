@@ -1,0 +1,65 @@
+\hypertarget{keyboard_8cpp}{}\section{/home/serge/\+Documents/\+Semester Project I\+N\+I/omnibot-\/lib/\+U\+S\+B\+\_\+robot/src/keyboard.cpp File Reference}
+\label{keyboard_8cpp}\index{/home/serge/\+Documents/\+Semester Project I\+N\+I/omnibot-\/lib/\+U\+S\+B\+\_\+robot/src/keyboard.\+cpp@{/home/serge/\+Documents/\+Semester Project I\+N\+I/omnibot-\/lib/\+U\+S\+B\+\_\+robot/src/keyboard.\+cpp}}
+
+
+This file provides the implementation of the keyboard communication.  
+
+
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$fcntl.\+h$>$}\\*
+{\ttfamily \#include $<$pthread.\+h$>$}\\*
+{\ttfamily \#include $<$linux/input.\+h$>$}\\*
+{\ttfamily \#include $<$unistd.\+h$>$}\\*
+{\ttfamily \#include $<$list$>$}\\*
+{\ttfamily \#include $<$errno.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$cstring$>$}\\*
+{\ttfamily \#include $<$termios.\+h$>$}\\*
+{\ttfamily \#include $<$dirent.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}keyboard.\+h\char`\"{}}\\*
+Include dependency graph for keyboard.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{keyboard_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{keyboard_8cpp_ab44bf9d3158f256a1002b4d655c5d920}{init\+Termios} (int echo)
+\begin{DoxyCompactList}\small\item\em Store old Terminal settings and Initialize new terminal i/o settings. \end{DoxyCompactList}\item 
+\hypertarget{keyboard_8cpp_a6de63f92240376d8f02045667c9c86ed}{}void \hyperlink{keyboard_8cpp_a6de63f92240376d8f02045667c9c86ed}{reset\+Termios} ()\label{keyboard_8cpp_a6de63f92240376d8f02045667c9c86ed}
+
+\begin{DoxyCompactList}\small\item\em Restore old terminal i/o settings. \end{DoxyCompactList}\item 
+\hypertarget{keyboard_8cpp_a9855a68540bc44e456ede87540ba9320}{}bool {\bfseries has\+Ending} (std\+::string const \&full\+String, std\+::string const \&ending)\label{keyboard_8cpp_a9855a68540bc44e456ede87540ba9320}
+
+\item 
+\hypertarget{keyboard_8cpp_ad18ddfac04f93ff317f59fe3325208a5}{}std\+::string {\bfseries find\+Keyboard} ()\label{keyboard_8cpp_ad18ddfac04f93ff317f59fe3325208a5}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file provides the implementation of the keyboard communication. 
+
+
+
+\subsection{Function Documentation}
+\hypertarget{keyboard_8cpp_ab44bf9d3158f256a1002b4d655c5d920}{}\index{keyboard.\+cpp@{keyboard.\+cpp}!init\+Termios@{init\+Termios}}
+\index{init\+Termios@{init\+Termios}!keyboard.\+cpp@{keyboard.\+cpp}}
+\subsubsection[{init\+Termios}]{\setlength{\rightskip}{0pt plus 5cm}void init\+Termios (
+\begin{DoxyParamCaption}
+\item[{int}]{echo}
+\end{DoxyParamCaption}
+)}\label{keyboard_8cpp_ab44bf9d3158f256a1002b4d655c5d920}
+
+
+Store old Terminal settings and Initialize new terminal i/o settings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em echo} & turns the terminal echo mode on (1) or off (0). \\
+\hline
+\end{DoxyParams}

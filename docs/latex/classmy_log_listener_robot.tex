@@ -1,0 +1,52 @@
+\hypertarget{classmy_log_listener_robot}{}\section{my\+Log\+Listener\+Robot Class Reference}
+\label{classmy_log_listener_robot}\index{my\+Log\+Listener\+Robot@{my\+Log\+Listener\+Robot}}
+
+
+Provides a concrete implementation of the abstract \hyperlink{class_robot_listener}{Robot\+Listener} to receive the servo states and the bumber states parsed from the robot event stream.  
+
+
+
+
+{\ttfamily \#include $<$my\+Log\+Listener\+Robot.\+h$>$}
+
+
+
+Inheritance diagram for my\+Log\+Listener\+Robot\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{classmy_log_listener_robot__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for my\+Log\+Listener\+Robot\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{classmy_log_listener_robot__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classmy_log_listener_robot_a19d65e6a5c0e14c9e08e8d1ffb23a709}{}void \hyperlink{classmy_log_listener_robot_a19d65e6a5c0e14c9e08e8d1ffb23a709}{received\+New\+Serial\+U\+S\+B\+Event} (std\+::queue$<$ \hyperlink{structservo_signals}{servo\+Signals} $>$ \&)\label{classmy_log_listener_robot_a19d65e6a5c0e14c9e08e8d1ffb23a709}
+
+\begin{DoxyCompactList}\small\item\em receives the decoded servos states from the observed robot \end{DoxyCompactList}\item 
+\hypertarget{classmy_log_listener_robot_a2fbd30aaa4a439e3d4e4b4ac812596c9}{}void \hyperlink{classmy_log_listener_robot_a2fbd30aaa4a439e3d4e4b4ac812596c9}{received\+New\+Serial\+U\+S\+B\+Event} (std\+::queue$<$ \hyperlink{structbumper}{bumper} $>$ \&)\label{classmy_log_listener_robot_a2fbd30aaa4a439e3d4e4b4ac812596c9}
+
+\begin{DoxyCompactList}\small\item\em receives the decoded bumber events from the observed robot \end{DoxyCompactList}\item 
+\hypertarget{classmy_log_listener_robot_a0e9b99ec81b173cad06d161c86cb86d8}{}void {\bfseries flush} ()\label{classmy_log_listener_robot_a0e9b99ec81b173cad06d161c86cb86d8}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Provides a concrete implementation of the abstract \hyperlink{class_robot_listener}{Robot\+Listener} to receive the servo states and the bumber states parsed from the robot event stream. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/serge/\+Documents/\+Semester Project I\+N\+I/omnibot-\/lib/\+U\+S\+B\+\_\+robot/include/my\+Log\+Listener\+Robot.\+h\item 
+/home/serge/\+Documents/\+Semester Project I\+N\+I/omnibot-\/lib/\+U\+S\+B\+\_\+robot/src/my\+Log\+Listener\+Robot.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,195 @@
+body {
+    padding: 0;
+    background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAADklEQVQImWNgQAUNZHAAQUQCAQpoxksAAAAASUVORK5CYII=) repeat;
+}
+
+.grid {
+    border: 1px solid #ccc;
+    border-width: 1px 0 0 1px;
+    float: left;
+    clear: both;
+}
+
+.grid div {
+    border: 1px solid #ccc;
+    border-width: 0 1px 1px 0;
+    float: left;
+    background-color: #eaeaea;
+    width: 21px;
+    height: 21px;
+}
+
+.grid div:hover{
+    background-color: #ee3 !important;
+}
+
+article {
+    clear: both;
+    float: left;
+    width: 100%;
+    background-color: #fff;
+}
+
+section {
+    font-size: 11px;
+    padding: 20px;
+    width: 400px;
+    float: left;
+}
+
+#log {
+    clear: both;
+}
+
+#aer {
+    clear: left;
+}
+
+#ctl {
+    clear: left;
+    padding-top: 30px;
+}
+
+#params {
+    float: left;
+}
+
+
+.tabs { 
+    position: relative;
+    z-index: 50;
+}
+
+.tabs > div > a { 
+    margin-left: -1px;
+    margin-right: 2px;
+    position: relative;
+    left: 1px;
+    text-decoration: none;
+    color: black;
+    background: #ccc;
+    display: block;
+    float: left;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-bottom: 0;
+    font-size: 13px;
+    height:18px
+}
+
+.tabs > div > div {
+    background: white;
+    z-index: -2;
+    left: 0px;
+    top: 29px;
+    right: 0px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-bottom: 0;
+    border-right: 0;
+    position:absolute;
+    display: none;
+}
+
+.tabs .tabs > div > div {
+    border-left: 0px;
+    padding: 1px 0 0 0;
+}
+
+.tabs > div.selected > a {
+    background: white;
+    border-bottom: 1px solid white;
+    background: linear-gradient(0deg, #fff, #eee);
+}
+
+.tabs > div.selected > div {
+    display: block;
+    z-index: -1;
+}
+
+.grid div span{
+    display: none;
+    font-size: 11px;
+    text-align: center;
+}
+
+.grid div:hover span{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    background-color: #bbb;
+    border-radius: 4px;
+    top: -20px;
+    left: -50px;
+    width: 120px;
+    color: #222;
+}
+
+.grid div span strong {
+    color: #000;
+}
+
+.biaslist, .filelist {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.biaslist li, .filelist li{
+    display: block;
+    width: 100%;
+    margin: 1px 0 1px 0;
+    padding: 2px;
+    clear: both;
+    float: left;
+    background-color: #eee;
+}
+
+.biaslist li:hover, .filelist li:hover{
+    background-color: #ee3;
+}
+
+.biaslist li strong, .biaslist li a, .filelist li strong, .filelist li a{
+    font-size: 11px;
+    text-decoration: none;
+    color: #000;
+    font-weight: normal;
+    display: inline-block;
+    float: left;
+    padding: 3px 2px 2px 2px;
+}
+
+.biaslist li span, .filelist li span{
+    float: right;
+}
+
+.biaslist li span select {
+    font-size: 11px;
+    border: 0px;
+    background-color: #eee;
+    border-radius: 2px;
+    margin: 0px;
+    padding: 0px;
+    margin-right: 3px;
+   -webkit-appearance: none;
+}
+
+.biaslist li:hover span select {
+    background-color: #fff;
+}
+
+.biaslist li span input[type="checkbox"] {
+    display: none;
+    vertical-align: middle;
+}
+
+.biaslist li span input[type="checkbox"] + label {
+    padding: 2px;
+    color: #bbb;
+    display:inline-block;
+    cursor:pointer;
+}
+
+.biaslist li span input[type="checkbox"]:checked + label {
+    color: #000;
+}

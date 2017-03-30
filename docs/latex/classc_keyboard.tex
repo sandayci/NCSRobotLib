@@ -1,0 +1,65 @@
+\hypertarget{classc_keyboard}{}\section{c\+Keyboard Class Reference}
+\label{classc_keyboard}\index{c\+Keyboard@{c\+Keyboard}}
+
+
+Manages the communication with an attached keyboard.  
+
+
+
+
+{\ttfamily \#include $<$keyboard.\+h$>$}
+
+
+
+Collaboration diagram for c\+Keyboard\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=189pt]{classc_keyboard__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classc_keyboard_a2eeb7d5dc750a6ce73befe70705c1751}{}void \hyperlink{classc_keyboard_a2eeb7d5dc750a6ce73befe70705c1751}{read\+Ev} ()\label{classc_keyboard_a2eeb7d5dc750a6ce73befe70705c1751}
+
+\begin{DoxyCompactList}\small\item\em gets a list of the pressed events from the keyboard. Pressing R \end{DoxyCompactList}\item 
+\hypertarget{classc_keyboard_ac60892c71a46e7fc67a19ea75a4a394f}{}short {\bfseries get\+Key\+State} (short key)\label{classc_keyboard_ac60892c71a46e7fc67a19ea75a4a394f}
+
+\item 
+\hypertarget{classc_keyboard_a5be1e8b98017298f094ff418e18a5af9}{}void {\bfseries register\+Listener} (\hyperlink{class_keyboard_listener}{Keyboard\+Listener} $\ast$)\label{classc_keyboard_a5be1e8b98017298f094ff418e18a5af9}
+
+\item 
+\hypertarget{classc_keyboard_ad829c57a7662e5c6115d059c9739c9bf}{}void {\bfseries deregister\+Listener} (\hyperlink{class_keyboard_listener}{Keyboard\+Listener} $\ast$)\label{classc_keyboard_ad829c57a7662e5c6115d059c9739c9bf}
+
+\item 
+\hypertarget{classc_keyboard_a77b96029cc90ff2df970249570955024}{}void {\bfseries warn\+Event} (input\+\_\+event $\ast$)\label{classc_keyboard_a77b96029cc90ff2df970249570955024}
+
+\item 
+\hypertarget{classc_keyboard_a4facfef83ec4b2e66d114c3393ebd5e7}{}int \hyperlink{classc_keyboard_a4facfef83ec4b2e66d114c3393ebd5e7}{listen} ()\label{classc_keyboard_a4facfef83ec4b2e66d114c3393ebd5e7}
+
+\begin{DoxyCompactList}\small\item\em Starts a new thread listening to the keyboard. \end{DoxyCompactList}\item 
+\hypertarget{classc_keyboard_a6eb520c368e14d18fc417531c5c0b809}{}int \hyperlink{classc_keyboard_a6eb520c368e14d18fc417531c5c0b809}{stop\+Listening} ()\label{classc_keyboard_a6eb520c368e14d18fc417531c5c0b809}
+
+\begin{DoxyCompactList}\small\item\em Stop listening and set m\+\_\+toggle\+Listening to false. \end{DoxyCompactList}\item 
+\hypertarget{classc_keyboard_afb266be2c1e34f140d2a55f17f288af9}{}bool \hyperlink{classc_keyboard_afb266be2c1e34f140d2a55f17f288af9}{is\+Listening} ()\label{classc_keyboard_afb266be2c1e34f140d2a55f17f288af9}
+
+\begin{DoxyCompactList}\small\item\em determines if an object is listening to the keyboard or not \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classc_keyboard_ae02219e223b4074f844797d3707ed106}{}static void $\ast$ \hyperlink{classc_keyboard_ae02219e223b4074f844797d3707ed106}{loop} (void $\ast$obj)\label{classc_keyboard_ae02219e223b4074f844797d3707ed106}
+
+\begin{DoxyCompactList}\small\item\em is executed in the new thread \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Manages the communication with an attached keyboard. 
+
+\hyperlink{classc_keyboard}{c\+Keyboard} manages the communication with an attached keyboard. It is assumed that the attached keyboard has the expression \char`\"{}kbd\char`\"{} in its name. This class can detect key releases and key presses. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/serge/\+Documents/\+Semester Project I\+N\+I/omnibot-\/lib/\+U\+S\+B\+\_\+robot/include/\hyperlink{keyboard_8h}{keyboard.\+h}\item 
+/home/serge/\+Documents/\+Semester Project I\+N\+I/omnibot-\/lib/\+U\+S\+B\+\_\+robot/src/\hyperlink{keyboard_8cpp}{keyboard.\+cpp}\end{DoxyCompactItemize}

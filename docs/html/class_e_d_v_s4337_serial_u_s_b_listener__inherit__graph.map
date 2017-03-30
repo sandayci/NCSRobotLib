@@ -1,0 +1,5 @@
+<map id="EDVS4337SerialUSBListener" name="EDVS4337SerialUSBListener">
+<area shape="rect" id="node2" href="$class_dumb_e_d_v_s4337_listener.html" title="{DumbEDVS4337Listener\n|+ m_historySize\l+ m_centerOfMassX\l+ m_centerOfMassY\l+ m_historyX\l+ m_historyY\l+ i\l+ gradX1\l+ gradX2\l+ gradY1\l+ gradY2\l+ iter\l|+ DumbEDVS4337Listener()\l+ ~DumbEDVS4337Listener()\l+ receivedNewEDVS4337Serial\lUSBEvent()\l+ receivedNewEDVS4337Serial\lUSBIMUEvent()\l+ start()\l}" alt="" coords="5,160,213,472"/>
+<area shape="rect" id="node3" href="$class_e_d_v_s_event_synchronizer.html" title="determines the offset between the timestamps from the EDVS and the computer " alt="" coords="237,211,445,421"/>
+<area shape="rect" id="node4" href="$classmy_log_listener_e_d_v_s.html" title="This class provides a concrete implementation of a eDVS event listener that logs the received events ..." alt="" coords="469,233,677,399"/>
+</map>
