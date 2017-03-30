@@ -7,6 +7,9 @@
 #include <thread>
 #include <mutex>
 #include <vector>
+#include <boost/filesystem.hpp>
+#include <boost/date_time.hpp>
+#include <unistd.h>
 
 /*! \file ROLLSDevice.h
  *  \brief This file contains all the necessary interfaces to connect to ROLLS.
@@ -63,6 +66,7 @@ public:
     void stimulate(NeuronGroup group, unsigned int synapse = 1);
     void probePlastic();
     void stimPlastic(unsigned int neuron, unsigned int synapse);
+    void readPlasticSynapses(int start_neuron, int end_neuron);	
     int setNonplasticSynapse(unsigned char pre_neuron,
                              unsigned char post_neuron,
                              bool recurrent,
