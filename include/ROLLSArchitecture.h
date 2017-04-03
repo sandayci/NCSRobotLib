@@ -12,12 +12,16 @@
 /*! \class ROLLSArchitecture
  *  \brief Provides an easy interface to set up a roll architecture
  */
-class ROLLSArchitecture {
+class ROLLSArchitecture 
+{
 public:
     // Matrices for plastic and non-plastic synapses
     // Format = Connection[pre_neuron][post_neuron]
     bool plastic [N_NEURONS][N_NEURONS] = { { false } };
     int nonplastic [N_NEURONS][N_NEURONS] = { { 0 } };
+    
+    //A purelly virtual function that actual architectures have to implement
+    virtual void createArchitecture() = 0;    
 
     // Method to apply a architecture to ROLLS
     void apply(ROLLSDevice& rolls);
