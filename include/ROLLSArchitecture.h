@@ -19,6 +19,9 @@ public:
     bool plastic [N_NEURONS][N_NEURONS] = { { false } };
     int nonplastic [N_NEURONS][N_NEURONS] = { { 0 } };
 
+    // Method to apply a architecture to ROLLS
+    void apply(ROLLSDevice& rolls);
+
     // Method to connect Plastic NeuronGroups
     void connectPlastic(NeuronGroup source, NeuronGroup target, bool setting);
 
@@ -35,9 +38,6 @@ public:
 
     // Method to connect neurons within a group exciatory
     void connectNonplastic(NeuronGroup group, int weight);
-
-    // Method to apply a architecture to ROLLS
-    void apply(ROLLSDevice& rolls);
 
     void connectNonplasticKernel(
         NeuronGroup group, std::vector<int> kernel, int w_global);
