@@ -6,19 +6,24 @@ const int INTERVAL = 50;  // time in milliseconds to check firing counts
 const double WEIGHT_OLD = 0.6;  // Factor for exponential window
 const double WEIGHT_NEW = 0.4;  // Factor for exponential window
 
-void ROLLSListener_Drive::receivedNewROLLSEvent(
-        unsigned int event) {
+void ROLLSListener_Drive::receivedNewROLLSEvent(unsigned int event) 
+{
     counter_mutex.lock();
-    if (drive_left.isOrigin(event)) left_counter++;
-    else if (drive_right.isOrigin(event)) right_counter++;
-    else if (speed.isOrigin(event)) speed_counter++;
+    if (drive_left.isOrigin(event)) 
+	    left_counter++;
+    else if (drive_right.isOrigin(event)) 
+	    right_counter++;
+    else if (speed.isOrigin(event)) 
+	    speed_counter++;
     counter_mutex.unlock();
 }
 
-void ROLLSListener_Drive::loop() {
+void ROLLSListener_Drive::loop() 
+{
     // Every INTERVAL time, update motors, then sleep for remaining time
     // Note: Execution takes less than a millisecond, so we don't time anything
-    while (!_stop) {
+    while (!_stop) 
+    {
         counter_mutex.lock();
         // Update states with old state and new counter
         n_left = WEIGHT_OLD * n_left + WEIGHT_NEW * left_counter;

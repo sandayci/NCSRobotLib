@@ -8,7 +8,8 @@
 #include <mutex>
 #include <functional>  // bind
 
-class ROLLSListener_Drive : public ROLLSListener {
+class ROLLSListener_Drive : public ROLLSListener 
+{
 public:
     ROLLSListener_Drive(PushBot *robot,
         NeuronGroup speed, NeuronGroup left, NeuronGroup right,
