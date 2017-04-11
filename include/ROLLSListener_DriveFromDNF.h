@@ -11,39 +11,36 @@
 class ROLLSListener_DriveFromDNF : public ROLLSListener 
 {
 public:
-    ROLLSListener_DriveFromDNF(PushBot *robot,NeuronGroup dnf)
-    : pushbot(robot), DNF(dnf), motor_thread(std::bind(&ROLLSListener_DriveFromDNF::loop, this)) 
-    {
-	phi_curr = 2;
-	phi_tar = 0;
-	speed_factor = 0;
-	turn_factor = 1;
-    };
+
+	  ROLLSListener_DriveFromDNF(PushBot *robot,NeuronGroup dnf);
 
     virtual ~ROLLSListener_DriveFromDNF() {_stop = true; motor_thread.join();}
 
     void receivedNewROLLSEvent(unsigned int neuron);
 
-    void goNoGo(bool stop);
-
     void setTurnFactor(double factor);
     
+    void loop();
+
+		void start();
+
+		void stop();	
+
 private:
     // Pushbot
     PushBot *pushbot;
-    void loop();
 
     // Neuron Populations
     NeuronGroup DNF;
 
     //current heading direction of the robot
-    int phi_curr;
+    double phi_curr;
+		double tau_turn;
+    double phi_tar;
 
-    //target heading direction, set by activity peak in the DNF
-    int phi_tar;
-
-    //turning command towards the target heading direction
-    int speed;
+    double speed;
+		double delta_phi;
+		double cameraOpeningAngle;
 
     // counter and states for spikes
     int turn_vel, forward_vel;
@@ -51,12 +48,12 @@ private:
     // Scaling for speed and turning
     double speed_factor;
     double turn_factor;
-    double time_factor;
+		const int delta_t;
 
     // variables for motor thread
     std::thread motor_thread;
     std::mutex counter_mutex;
-    bool _stop = true;
+    bool _stop;
 
 };
 

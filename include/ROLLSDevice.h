@@ -32,8 +32,8 @@ public:
   : start(from), end(to) {};
 
   // Values, Neuron Range (first and last neuron index)
-  unsigned char start;
-  unsigned char end;
+  unsigned int start;
+  unsigned int end;
 
   // Function to check if a rolls event was fired by the group
   bool isOrigin(int event);
