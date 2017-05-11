@@ -13,7 +13,7 @@ void ROLLSArchitecture::apply(ROLLSDevice& rolls)
     for (int pre = 0; pre < N_NEURONS; pre++) 
     {
         for (int post = 0; post < N_NEURONS; post++) 
-	{
+				{	
             // don't connect blacklisted neurons
             if (rolls.isBadNeuron(pre) || rolls.isBadNeuron(post))
                 continue;
@@ -21,25 +21,27 @@ void ROLLSArchitecture::apply(ROLLSDevice& rolls)
             // Nonplastic synapse
             setting = nonplastic[pre][post];
             if (setting == 0) 
-	    {
+	    			{
                 // Disconnect, a.k.a recurrent = 0
                 rolls.setNonplasticSynapse(pre, post, false);
             } 
-	    else 
-	    {
+	    			else 
+	    			{
                 // Excitatory (positive) or inhibitory (negative)
                 if (setting > 0) 
-		{
+								{
                     mode = excitatory;
                 } 
-		else 
-		{
+								else 
+								{
                     setting *= -1;  // To choose weight later
                     mode = inhibitory;
                 }
+						}
 
                 // Choose weight
-                switch(setting) {
+                switch(setting) 
+								{
                     case 1:
                         weight = weight_0;
                         break;
@@ -54,8 +56,8 @@ void ROLLSArchitecture::apply(ROLLSDevice& rolls)
                         break;
                 }
 
-                rolls.setNonplasticSynapse(pre, post, true, mode, weight);
-            }
+            rolls.setNonplasticSynapse(pre, post, true, mode, weight);
+          
 
             // Plastic synapse
             setting = plastic[pre][post];
@@ -85,7 +87,7 @@ void ROLLSArchitecture::connectNonplastic(NeuronGroup source, NeuronGroup target
     for (int src = source.start; src <= source.end; src++) 
     {
         for (int tgt = target.start; tgt <= target.end; tgt++) 
-	{
+				{
             nonplastic[src][tgt] = weight;
         }
     }
@@ -123,16 +125,16 @@ void ROLLSArchitecture::connectNonplasticKernel(NeuronGroup group, std::vector<i
     for (int src = group.start; src <= group.end; src++) 
     {
         for (int tgt = group.start; tgt <= group.end; tgt++) 
-	{
+				{
             unsigned int distance = abs(tgt - src);
             if (distance < kernel.size()) 
-	    {
+	    			{
                 connectNonplastic(src, tgt, kernel[distance]);
             } 
-	    else 
-	    {
+	    			else 
+	    			{
                 connectNonplastic(src, tgt, w_global);
-            }
+      			}
         }
     }
 }
@@ -148,7 +150,7 @@ void ROLLSArchitecture::connectNonplasticFeedForward(NeuronGroup source, NeuronG
 
 void ROLLSArchitecture::connectNonplasticRandomSource(NeuronGroup source, NeuronGroup target, int weight,
         std::function<double(int, NeuronGroup)> func) 
-{
+	{
     std::mt19937 generator;  // random number generator, initialized with
                              // always equal default seed
 
@@ -164,7 +166,7 @@ void ROLLSArchitecture::connectNonplasticRandomSource(NeuronGroup source, Neuron
         // Ceil to better use available connections, only zero if factor == 0
         const int num_sources = (int) std::ceil(factor * source.size());
         for (int i = 0; i < num_sources; i++) 
-	{
+				{
             connectNonplastic(source_neurons[idx++], tgt, weight);
 
             // reset index if end of source_neurons is reached
@@ -175,7 +177,7 @@ void ROLLSArchitecture::connectNonplasticRandomSource(NeuronGroup source, Neuron
 
 void ROLLSArchitecture::connectNonplasticRandomTarget(NeuronGroup source, NeuronGroup target, int weight,
         std::function<double(int, NeuronGroup)> func) 
-{
+	{
     std::mt19937 generator;  // random number generator, initialized with
                              // always equal default seed
 
@@ -191,7 +193,7 @@ void ROLLSArchitecture::connectNonplasticRandomTarget(NeuronGroup source, Neuron
         // Ceil to better use available connections, only zero if factor == 0
         const int num_targets = (int) std::ceil(factor * target.size());
         for (int i = 0; i < num_targets; i++) 
-	{
+				{
             connectNonplastic(src, target_neurons[idx++], weight);
 
             // reset index if end of target_neurons is reached

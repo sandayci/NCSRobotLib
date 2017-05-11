@@ -24,30 +24,33 @@ public:
 
     void receivedNewROLLSEvent(unsigned int neuron);
 
-    void goNoGo(bool stop);
-
     void setTurnFactor(double factor);
 
     void start();
 
     void stop();
     
+    void loop();
+
+    void start();
+
+    void stop();	
+
 private:
     // Pushbot
     PushBot *pushbot;
-    void loop();
 
     // Neuron Populations
     NeuronGroup DNF;
 
     //current heading direction of the robot
-    int phi_curr;
+    double phi_curr;
+    double tau_turn;
+    double phi_tar;
 
-    //target heading direction, set by activity peak in the DNF
-    int phi_tar;
-
-    //turning command towards the target heading direction
-    int speed;
+    double speed;
+    double delta_phi;
+    double cameraOpeningAngle;
 
     // counter and states for spikes
     int turn_vel, forward_vel;
@@ -55,13 +58,13 @@ private:
     // Scaling for speed and turning
     double speed_factor;
     double turn_factor;
-    double time_factor;
+    const int delta_t;
 
     bool thread_running;
     // variables for motor thread
     std::thread motor_thread;
     std::mutex counter_mutex;
-    bool _stop = true;
+    bool _stop;
 
 };
 

@@ -10,18 +10,21 @@
  *  \brief This file provides the implementation of the keyboard communication
  */
 
-bool NeuronGroup::isOrigin(int event) {
+bool NeuronGroup::isOrigin(int event) 
+{
     // The event is equal to the index of the neuron that fired.
     // Check if it is a neuron in the group
     return ( (event >= start) && (event <= end) );
 }
 
-int NeuronGroup::size() {
+int NeuronGroup::size() 
+{
     // Return the size of the group
     return end-start + 1;
 }
 
-std::vector<int> NeuronGroup::getVector() {
+std::vector<int> NeuronGroup::getVector() 
+{
     // Get vector of all elements in the Neuron group
     std::vector<int> v(size());
     // iota fills the container beginning with third argument and increasing
@@ -29,11 +32,14 @@ std::vector<int> NeuronGroup::getVector() {
     return v;
 }
 
-ROLLSDevice::ROLLSDevice(std::list<int> neurons) : bad_neurons(neurons) {
-    if (_aer_device_open == true) {
+ROLLSDevice::ROLLSDevice(std::list<int> neurons) : bad_neurons(neurons) 
+{
+    if (_aer_device_open == true) 
+		{
         std::cout<<"ROLLS device already open."<<std::endl;
     }
-    else {
+    else 
+		{
         std::cout<<"Opening ROLLS aer device: "<<std::endl;
         aer_dev = aerOpenDevice();
         if (aer_dev >= 0) {
@@ -49,63 +55,74 @@ ROLLSDevice::~ROLLSDevice() {
     aerClose(aer_dev);
 }
 
-void ROLLSDevice::loop() {
-    std::cout << "ROLLS loop started" << std::endl;
-
+void ROLLSDevice::loop() 
+{
     mutex.lock();
     aer_head = aerFindHead();
     mutex.unlock();
-
-    while (toggleListening) {
+    std::cout << "ROLLS loop started" << std::endl;
+    while (toggleListening) 
+		{
         readEv();
     }
 }
 
-void  ROLLSDevice::readEv() {
+void  ROLLSDevice::readEv() 
+{
     mutex.lock();
     event = aerReadMem(2*aer_head);
     mutex.unlock();
 
-    if (event != 0xffffffff) {
+    if (event != 0xffffffff) 
+		{
         aer_head = (aer_head+1)%AER_BUFFER_SIZE;
-
         // only warn if neuron is not blacklisted
-        if (!isBadNeuron(event)) warnEvent(event);
+        if (!isBadNeuron(event)) 
+					warnEvent(event);
     }
 }
 
-void ROLLSDevice::registerListener(ROLLSListener* listener) {
+void ROLLSDevice::registerListener(ROLLSListener* listener) 
+{
     listeners.push_back(listener);
 }
 
-void ROLLSDevice::deregisterListener(ROLLSListener* listener) {
+void ROLLSDevice::deregisterListener(ROLLSListener* listener) 
+{
     listeners.remove(listener);
 }
 
-void ROLLSDevice::warnEvent(unsigned int event) {
+void ROLLSDevice::warnEvent(unsigned int event) 
+{
     std::list<ROLLSListener*>::const_iterator it;
-    for(it = listeners.begin(); it!=listeners.end(); it++) {
+    for(it = listeners.begin(); it!=listeners.end(); it++) 
+		{
         (*it)->receivedNewROLLSEvent(event);
     }
 }
 
-void ROLLSDevice::stimulate(unsigned int neuron, unsigned int synapse) {
+void ROLLSDevice::stimulate(unsigned int neuron, unsigned int synapse) 
+{
     mutex.lock();
     aerStimSyn(VIRTUAL, neuron, synapse);
     mutex.unlock();
 }
 
-void ROLLSDevice::stimulate(NeuronGroup group, unsigned int synapse) {
+void ROLLSDevice::stimulate(NeuronGroup group, unsigned int synapse) 
+{
     // Stimulate a whole group of neurons
     mutex.lock();
-    for (int neuron = group.start; neuron <= group.end; neuron++) {
+    for (int neuron = group.start; neuron <= group.end; neuron++) 
+		{
         aerStimSyn(VIRTUAL, neuron, synapse);
     }
     mutex.unlock();
 }
 
-void ROLLSDevice::probePlastic() {
-    for (int i = 0; i<256; i++) {
+void ROLLSDevice::probePlastic() 
+{
+    for (int i = 0; i<256; i++) 
+		{
         std::cout<<i<<std::endl;
         for (int j = 0; j<256; j++) {
             for (int t = 0; t<400; t++) {
@@ -193,33 +210,37 @@ void ROLLSDevice::readPlasticSynapses(int start_neuron, int end_neuron) {
                 usleep(16);
         }
 	std::cout  << "Done stimulating sync end neuron" << std::endl;
-	std::cout  << "ROLLS stimulation done" << std::endl;		
   }
 
-void ROLLSDevice::stimPlastic(unsigned int neuron, unsigned int synapse) {
+void ROLLSDevice::stimPlastic(unsigned int neuron, unsigned int synapse) 
+{
      // Simulate Neuron through plastic synapses
      mutex.lock();
      aerStimSyn(0, neuron, synapse);
      mutex.unlock();
 }
 
-void  ROLLSDevice::listen( void ) {
-    if (!toggleListening) {
+void  ROLLSDevice::listen( void ) 
+{
+    if (!toggleListening) 
+		{
         std::cout<<"ROLLSDevice: Activate listening"<<std::endl;
         toggleListening = true;
         thread = std::thread(std::bind(&ROLLSDevice::loop, this));
     }
-    else {
-        std::cout<< "ROLLSDevice: Already listening, no action required"
-                 << std::endl;
+    else 
+		{
+        std::cout<< "ROLLSDevice: Already listening, no action required"<< std::endl;
     }
 }
 
-bool ROLLSDevice::isListening() {
+bool ROLLSDevice::isListening() 
+{
     return toggleListening;
 }
 
-void  ROLLSDevice::stopListening( void ) {
+void  ROLLSDevice::stopListening( void ) 
+{
     toggleListening = false;
     thread.join();
     std::cout << "ROLLSDevice: Stop listening" << std::endl;
@@ -229,20 +250,25 @@ int ROLLSDevice::setNonplasticSynapse(unsigned char pre_neuron,
                                       unsigned char post_neuron,
                                       bool recurrent,
                                       SynapseMode mode,
-                                      SynapseWeight weight) {
+                                      SynapseWeight weight) 
+{
     Synapse synapse;
     synapse.type = NONPLASTIC;
     synapse.source = pre_neuron;
     synapse.target = post_neuron;
     synapse.recurrent = recurrent;
     // Convert mode to flag
-    if (mode == excitatory) {
+    if (mode == excitatory) 
+		{
         synapse.mode = EXC;
-    } else {
+    } 
+		else 
+		{
         synapse.mode = INH;
     }
     // Convert weight to flags for the two weight bits
-    switch (weight) {
+    switch (weight) 
+		{
         case weight_0:
             synapse.wgt1 = DISABLE;
             synapse.wgt2 = DISABLE;
@@ -270,7 +296,8 @@ int ROLLSDevice::setNonplasticSynapse(unsigned char pre_neuron,
 
 int ROLLSDevice::setPlasticSynapse(unsigned char pre_neuron,
                                    unsigned char post_neuron,
-                                   bool recurrent){
+                                   bool recurrent)
+{
     Synapse synapse;
     synapse.type = PLASTIC;
     synapse.source = pre_neuron;
@@ -288,7 +315,8 @@ int ROLLSDevice::setPlasticSynapse(unsigned char pre_neuron,
     return result;
 }
 
-bool ROLLSDevice::isBadNeuron(int neuron) {
+bool ROLLSDevice::isBadNeuron(int neuron) 
+{
     // checks if a neuron is blacklisted
     return (std::find(bad_neurons.begin(), bad_neurons.end(), neuron)
            != bad_neurons.end());
