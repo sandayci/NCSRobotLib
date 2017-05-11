@@ -26,6 +26,25 @@ void ROLLSListener_DriveFromDNF::setTurnFactor(double factor)
 	turn_factor = factor;
 }
 
+void ROLLSListener_DriveFromDNF::start()
+{
+	if (!thread_running)
+	{
+		motor_thread = std::thread(std::bind(&ROLLSListener_DriveFromDNF::loop, this));
+		thread_running = true;
+		std::cout<<"DriveFromDNF: starting thread"<<std::endl;
+	}
+}
+
+
+void ROLLSListener_DriveFromDNF::stop()
+{
+	thread_running = false;
+	motor_thread.join();
+	std::cout<<"DriveFromDNF: stop thread"<<std::endl;
+}
+
+
 void ROLLSListener_DriveFromDNF::loop() 
 {
     // Every INTERVAL time, update motors, then sleep for remaining time
