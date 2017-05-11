@@ -1,0 +1,2 @@
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar qc libebv-visualizer.a  CMakeFiles/ebv-visualizer.dir/src/EBV_Visualizer.cpp.o CMakeFiles/ebv-visualizer.dir/ebv-visualizer_automoc.cpp.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib libebv-visualizer.a

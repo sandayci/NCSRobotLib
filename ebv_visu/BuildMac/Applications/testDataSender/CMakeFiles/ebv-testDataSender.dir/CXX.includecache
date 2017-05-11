@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/yulia/Dropbox/Yulia/ebv_visu/Applications/testDataSender/src/main.cpp
+iostream
+-
+QUdpSocket
+-
+QDataStream
+-
+cmath
+-
+
+/Users/yulia/Dropbox/Yulia/ebv_visu/BuildMac/Applications/testDataSender/ebv-testDataSender_automoc.cpp
+
+/Users/yulia/Qt/5.8/clang_64/lib/QtCore.framework/Headers/QDataStream
+qdatastream.h
+/Users/yulia/Qt/5.8/clang_64/lib/QtCore.framework/Headers/qdatastream.h
+
+/Users/yulia/Qt/5.8/clang_64/lib/QtCore.framework/Headers/qdatastream.h
+QtCore/qscopedpointer.h
+-
+QtCore/qiodevice.h
+-
+QtCore/qpair.h
+-
+
+/Users/yulia/Qt/5.8/clang_64/lib/QtNetwork.framework/Headers/QUdpSocket
+qudpsocket.h
+/Users/yulia/Qt/5.8/clang_64/lib/QtNetwork.framework/Headers/qudpsocket.h
+
+/Users/yulia/Qt/5.8/clang_64/lib/QtNetwork.framework/Headers/qudpsocket.h
+QtNetwork/qtnetworkglobal.h
+-
+QtNetwork/qabstractsocket.h
+-
+QtNetwork/qhostaddress.h
+-
+

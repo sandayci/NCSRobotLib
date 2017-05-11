@@ -1,0 +1,2 @@
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar qc libebv-thirdparty-qcustomplot.a  CMakeFiles/ebv-thirdparty-qcustomplot.dir/src/qcustomplot.cpp.o CMakeFiles/ebv-thirdparty-qcustomplot.dir/ebv-thirdparty-qcustomplot_automoc.cpp.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib libebv-thirdparty-qcustomplot.a
