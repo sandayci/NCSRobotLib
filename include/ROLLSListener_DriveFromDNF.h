@@ -12,7 +12,7 @@ class ROLLSListener_DriveFromDNF : public ROLLSListener
 {
 public:
     ROLLSListener_DriveFromDNF(PushBot *robot,NeuronGroup dnf)
-    : pushbot(robot), DNF(dnf), motor_thread(std::bind(&ROLLSListener_DriveFromDNF::loop, this)) 
+    : pushbot(robot), DNF(dnf)  
     {
 	phi_curr = 2;
 	phi_tar = 0;
@@ -27,6 +27,10 @@ public:
     void goNoGo(bool stop);
 
     void setTurnFactor(double factor);
+
+    void start();
+
+    void stop();
     
 private:
     // Pushbot
@@ -53,6 +57,7 @@ private:
     double turn_factor;
     double time_factor;
 
+    bool thread_running;
     // variables for motor thread
     std::thread motor_thread;
     std::mutex counter_mutex;
