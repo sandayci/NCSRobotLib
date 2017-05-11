@@ -162,7 +162,7 @@ void ROLLSDevice::readPlasticSynapses(int start_neuron, int end_neuron) {
 			
 			// stimulate neurons to test (from start to end neuron)
 		  	stimulate(i);
-			usleep(1.2);
+			usleep(12);
 		}
 		while (diff>300 && diff< 150000) 
 		{
@@ -176,7 +176,7 @@ void ROLLSDevice::readPlasticSynapses(int start_neuron, int end_neuron) {
 				stimulate(j,6);
 				stimulate(j,7);
 			}
-			usleep(0.4);
+			usleep(4);
 		}
 		usleep(50000);
 	}
@@ -190,7 +190,7 @@ void ROLLSDevice::readPlasticSynapses(int start_neuron, int end_neuron) {
                 diff2 = now_2 - now;
                 diff = diff2.total_milliseconds();
                 stimulate(200);
-                usleep(1.666);
+                usleep(16);
         }
 	std::cout  << "Done stimulating sync end neuron" << std::endl;
 	std::cout  << "ROLLS stimulation done" << std::endl;		
@@ -222,7 +222,7 @@ bool ROLLSDevice::isListening() {
 void  ROLLSDevice::stopListening( void ) {
     toggleListening = false;
     thread.join();
-    std::cout << "Stop listening" << std::endl;
+    std::cout << "ROLLSDevice: Stop listening" << std::endl;
 }
 
 int ROLLSDevice::setNonplasticSynapse(unsigned char pre_neuron,
